@@ -1,7 +1,7 @@
-# Curso Codo a Codo Fullstack 2024
+- Curso Codo a Codo Fullstack 2024
 
 
-# Equipo:
+- Equipo:
 
 - Cristian Ferro
 - Sebastián Cardozo
