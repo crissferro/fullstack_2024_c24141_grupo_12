@@ -23,7 +23,7 @@ body {
   top: 0;
   z-index: 99;
 
-  background-image: url('/img/navbar_cafe.jpg');
+  background-image: url('./img/navbar_cafe.jpg');
   background-size: cover;
   /*min-height: 100vh;*/
 }
