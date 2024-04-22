@@ -84,19 +84,62 @@ body {
 .grid-container>div {
   height: 200px;
   align-content: center;
-  background-color: bisque;
+  background-color: #CCC2B6;
   border: 1px solid blue;
   text-align: center;
   font-size: 20px;
 }
 
+
+/*........estilo para card index......*/
+
+.tarjeta{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:420px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+  font-family: sans-serif;
+}
+.titulo{
+  font-size: 24px;
+  padding: 10px 10px 0 10px;;
+}
+.cuerpo{
+  padding: 10px;
+}
+.pie{
+  background: #6699ff;
+  border-radius:0 0 15px 15px;
+  padding: 10px;
+  text-align:center;
+}
+.pie a{
+  text-decoration: none;
+  color: white;
+}
+.pie a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: ""
+}
+
+/*.........fin card...........*/
+
+
 .nespresso {
-  background: url('/img/capsula_nespresso.jpg');
+  background: url('/img/nespresso.jpg');
   background-size: cover;
 }
 
 .dolce {
-  background: url('/img/cafe_granos.jpg');
+  background: url('/img/dolcegusto.jpg');
   background-size: cover;
 }
 
@@ -109,7 +152,7 @@ body {
 .banner {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: brown;
+  background-color: #CCC2B6;
   font-size: 50px;
   text-align: center;
 }
