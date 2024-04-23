@@ -20,22 +20,29 @@
   <body>
     <header>
       <nav>
-        <div id="navbar">
-          <a href="index.html" id="logo"
-            ><img src="./img/cafe50.png" alt="logo"
-          /></a>
-
-          <div id="navbar-left">
-            <a class="active" href="index.html">Inicio</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="index.html" class="enlace"><img src="./img/cafe50.png" class="logo" alt="logo"/></a>
+        <ul>
+          <li>
+          <a class="active" href="index.html">Inicio</a>
+          </li>
+          <li>
             <a href="productos.html">Productos</a>
+          </li>
+          <li>
             <a href="clientes.html">Nuestros Clientes</a>
+          </li>
+          <li>
             <a href="contacto.html">Contactenos</a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
-      <div id="slider">
+      <div class="slider" id="slider">
         <figure>
           <img src="./img/nespresso.jpg" alt="capsulas nespresso" />
           <img src="./img/dolcegusto.jpg" alt="capsulas dolce gusto" />
