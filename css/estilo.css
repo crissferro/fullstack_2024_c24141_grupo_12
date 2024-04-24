@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap');
 
-/*
+
 :root{
   --principal: #CCC2B6;
   --secundario: #00F08C;
@@ -8,7 +8,7 @@
   --importante: #F02500;
   --blanco: #F5F5F5;
 }
-*/
+
 
 * {
   margin: 0;
@@ -206,23 +206,19 @@ nav li {
   text-align: center;
 }
 
+.barra-cafe {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+}
+
 /*.........fin barra compra online...........*/
 
 /*.........FOOTER...........*/
-/*
-.footer {
-  /*position: fixed;*/
-  /*display: block;
-  bottom: 0;
-  background-color: #f1f1f1;
-  text-align: center;
-  width: 100%;
-}
-*/
 
 footer{
   grid-area: footer;
-  background-color: var(--principal);
+  background-color: #CCC2B6;
   padding: 10px;
   color: var(--blanco);
   font-size: 1.2em;
