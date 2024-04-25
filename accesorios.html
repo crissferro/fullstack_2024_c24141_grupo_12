@@ -14,21 +14,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- validar mail -->
-    <script type="text/javascript">
-      function validarEmail(valor) {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor))
-          alert("La dirección de email " + valor + " es correcta.");
-        else alert("La dirección de email es incorrecta.");
-      }
-    </script>
 
     <title>SoloCaps</title>
     <link
@@ -40,11 +25,13 @@
   <body>
     <header>
       <div class="titulosolocaps">
-        <img
-          src="./img/img-nuevas/logonuevo.svg"
-          alt="Logo de Solo Caps"
-          class="logo"
-        />
+        <a href="index.html">
+          <img
+            src="./img/img-nuevas/logonuevo.svg"
+            alt="Logo de Solo Caps"
+            class="logo"
+        /></a>
+
         <h1>Solo Caps</h1>
       </div>
       <nav class="menu">
@@ -102,61 +89,7 @@
         </button>
       </div>
       <!--fin de carrusel-->
-
-      <section class="contenedor_contacto seccion contenido-centrado">
-        <h2 class="centrar-texto">Llena el Formulario de Contacto</h2>
-
-        <form action="" class="contacto">
-          <fieldset>
-            <legend>Informacion Personal</legend>
-
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Tu Nombre" />
-
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Tu Correo Electronico"
-              required
-            />
-
-            <label for="telefono">Telefono:</label>
-            <input type="tel" id="telefono" placeholder="Tu Telefono" />
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje">Deja tu mensaje</textarea>
-          </fieldset>
-
-          <fieldset>
-            <legend>Contacto</legend>
-
-            <p>Como desea ser contactado:</p>
-            <div class="forma-contacto">
-              <label for="telefono">Telefono</label>
-              <input type="radio" name="contacto" value="telefono" />
-
-              <label for="correo">Correo</label>
-              <input type="radio" name="contacto" value="correo" id="correo" />
-            </div>
-
-            <p>Si Eligio Telefono, elija la Fecha y Hora</p>
-
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" />
-
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" min="9:00" max="18:00" />
-          </fieldset>
-
-          <input
-            type="submit"
-            value="Enviar"
-            class="boton boton-verde"
-            onclick="return validarEmail()"
-          />
-        </form>
-      </section>
+      <h2>Accesorios</h2>
     </main>
     <footer>
       <div class="footer">

@@ -1,332 +1,408 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap');
 
-/*
-:root{
-  --principal: #CCC2B6;
-  --secundario: #00F08C;
-  --resaltado: #F06B00;
-  --importante: #F02500;
-  --blanco: #F5F5F5;
-}
-*/
-@font-face{
+@font-face {
   font-family: 'introbold';
-  src: url(/fullstack_2024_c24141_grupo_12-main/fuentes/Intro\ Black\ Alt.otf);
+  src: url(/fuentes/Intro_Black_Alt.otf);
   font-weight: bold;
   font-style: bold;
 }
-@font-face{
+
+@font-face {
   font-family: 'introregular';
-  src: url(/fullstack_2024_c24141_grupo_12-main/fuentes/Intro\ Regular\ Alt.otf);
+  src: url(/fuentes/Intro_Regular_Alt.otf);
   font-weight: bold;
   font-style: bold;
 }
-@font-face{
+
+@font-face {
   font-family: 'introbook';
-  src: url(/fullstack_2024_c24141_grupo_12-main/fuentes/Intro\ Book\ Alt.otf);
- font-weight: normal;
+  src: url(/fuentes/Intro_Book_Alt.otf);
+  font-weight: normal;
   font-style: normal;
 }
-* {
-  
-  margin: 0;
-  padding: 0;
-  font-family: 'introregular';
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-body{
- 
-  width: 100%;
-  margin: auto;
-  padding-top: 10px;
-}
-
-/*.........menu...........*/
-
-nav ul {
-  list-style-type: none;
-}
-nav li {
-  display: inline;
-}
-.titulosolocaps {
-  text-align: center;
-  display: flex; 
-  align-items: center;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.titulosolocaps h1 {
-  font-family:'introbold';
-  font-size: 48px;
-  color: #735d78;
-  text-shadow: 1px 1px 2px #666;
-  margin: 0; /* Elimina márgenes predeterminados para un control mejor */
-  padding: 20px;
- 
-  border-radius: 10px;
- 
-}
-
-.logo {
-  height: 90px; 
-  width: auto;
-  margin-right: 15px;
-}
-
-
-
-
-
-
-/*.........fin menu...........*/
-
-/* Estilo base para la navegación */
-.menu {
-  background-color: #e8c2ca; 
-  text-align: center; /* Centra los elementos dentro del menú */
-  margin: 0; 
-  padding: 0; 
-}
-
-.menu ul {
-  list-style: none;
-  padding: 0; 
-  margin: 0; 
-}
-
-.menu li {
-  display: inline-block; 
-  margin-right: -4px; 
-}
-
-.menu a {
-  display: block;
-  padding: 10px 20px; 
-  color: rgb(0, 0, 0); 
-  text-decoration: none; 
-  transition: background-color 0.2s, color 0.2s; 
-}
-
-/* Estilo para el hover de los enlaces */
-.menu a:hover, .menu a:focus {
-  background-color: #b392ac;
-  color: white; 
-  border-radius: 10px;
-}
-
-
-
-/*..................fin slider del index ..............*/
-
-
-/*........estilo para card index......*/
-img{
-  width: 320px;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
-}
-
-
-
-/* Estilo contenedores */
-.carrito{
-  width: 45px;
-  height: auto;
-}
-.contenedor{
-   display: flex;
-   justify-content: center;
-   flex-wrap:wrap ;
-   gap: 50px;
-   margin-bottom: 20px;
-}
-.contenedor div {
-  max-width: 320px;  /* Ejemplo de un ancho máximo */
-  margin: auto;  /* Centrar el contenido si es menor que el máximo */
-}
-.contenedor>div{
-   box-shadow: 0px 0px 5px 0px  rgba(0, 0, 0, 0.75);
-   background-color:#f7d1cd;
-   border-radius: 30x;
-}
-
-.informacion{
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap:15px;
-  
-}
-.informacion>p:first-child{
-  font-family: 'introbook';
-  font-size: 25px;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  width: 100%;  
-}
-
-
-.informacion .precio{
-  font-size: 20px;
-  font-weight: 500;
-  font-family: 'introbold';
-}
-.informacion button{
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease; 
-}
-.informacion button:hover{
-  background-color: #b392ac;
-  transform: scale(1.2); /* Aumenta el tamaño del botón un 10% */
-  
-}
-
-
-.pie{
-  background: #f5a84b;
-  border-radius:0 0 15px 15px;
-  padding: 10px;
-  text-align:center;
-}
-
-.pie a{
-  text-decoration: none;
-  color: white;
-}
-.pie a:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: ""
-}
-
-
-
-
-
-
-/*.........fin card...........*/
-
-/*.........barra compra online...........*/
-
-.barra-online {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #CCC2B6;
-  font-size: 40px;
-  text-align: center;
-}
-
-/*.........fin barra compra online...........*/
-
-/*.........FOOTER...........*/
-/*
-.footer {
-  /*position: fixed;*/
-  /*display: block;
-  bottom: 0;
-  background-color: #f1f1f1;
-  text-align: center;
-  width: 100%;
-}
-*/
-
-footer{
-  grid-area: footer;
-  background-color: var(--principal);
-  padding: 10px;
-  color: var(--blanco);
-  font-size: 1.2em;
-  text-align: center;
-}
-
-
-/*.........FIN FOOTER...........*/
-
-
-
-
-
-
-
-
-
-/*.........CONTACTENOS...........*/
-
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.formulario {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-
-/*.........FIN CONTACTENOS...........*/
-
-
-/*.........PRODUCTOS...........*/
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-  padding: 10px;
-}
-
-.grid-container>div {
-  height: 200px;
-  align-content: center;
-  background-color: #CCC2B6;
-  border: 1px solid blue;
-  text-align: center;
-  font-size: 20px;
-}
-
-
-
-/*.........FIN PRODUCTOS...........*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+
+  * {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'introregular';
+    /*box-sizing: border-box;*/
+    text-decoration: none;
+  }
+
+  body {
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+  }
+
+  /* generales */
+  .contenedor_contacto {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  .seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .left-texto {
+    text-align: left;
+  }
+
+  .centrar-texto {
+    text-align: center;
+  }
+
+  .d-block {
+    display: block !important;
+  }
+
+  .contenido-centrado {
+    max-width: 800px;
+  }
+
+
+
+
+  /*.........menu...........*/
+
+  nav ul {
+    list-style-type: none;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  .titulosolocaps {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .titulosolocaps h1 {
+    font-family: 'introbold';
+    font-size: 48px;
+    color: #735d78;
+    text-shadow: 1px 1px 2px #666;
+    margin: 0;
+    /* Elimina márgenes predeterminados para un control mejor */
+    padding: 20px;
+
+    border-radius: 10px;
+
+  }
+
+  .logo {
+    height: 90px;
+    width: auto;
+    margin-right: 15px;
+  }
+
+
+
+
+
+
+  /*.........fin menu...........*/
+
+  /* Estilo base para la navegación */
+  .menu {
+    background-color: #e8c2ca;
+    text-align: center;
+    /* Centra los elementos dentro del menú */
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  /* Estilo para el hover de los enlaces */
+  .menu a:hover, .menu a:focus {
+    background-color: #b392ac;
+    color: white;
+    border-radius: 10px;
+  }
+
+
+
+  /*..................fin slider del index ..............*/
+
+
+  /*........estilo para card index......*/
+  img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+
+
+  /* Estilo contenedores */
+  .carrito {
+    width: 45px;
+    height: auto;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+
+  .contenedor div {
+    max-width: 320px;
+    /* Ejemplo de un ancho máximo */
+    margin: auto;
+    /* Centrar el contenido si es menor que el máximo */
+  }
+
+  .contenedor>div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #f7d1cd;
+    border-radius: 30x;
+  }
+
+  .informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+  }
+
+  .informacion>p:first-child {
+    font-family: 'introbook';
+    font-size: 25px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+
+  .informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'introbold';
+  }
+
+  .informacion button {
+    background-color: #d1b3c4;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.1s ease;
+  }
+
+  .informacion button:hover {
+    background-color: #b392ac;
+    transform: scale(1.2);
+    /* Aumenta el tamaño del botón un 10% */
+
+  }
+
+
+  .pie {
+    background: #f5a84b;
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .pie a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .pie a:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: ""
+  }
+
+
+  /*.........fin card...........*/
+
+  /*.........barra compra online...........*/
+
+  .barra-online {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #CCC2B6;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  /*.........fin barra compra online...........*/
+
+  /*.........FOOTER...........*/
+
+  footer {
+    grid-area: footer;
+    background-color: var(--principal);
+    padding: 10px;
+    color: var(--blanco);
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+
+  /*.........FIN FOOTER...........*/
+
+
+
+
+
+
+
+
+
+  /*.........CONTACTENOS...........*/
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .formulario {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+
+  .contacto p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+    margin: 2rem 0 0 0;
+  }
+
+  legend {
+    font-size: 2rem;
+    color: rgb(32, 32, 32);
+  }
+
+  label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  input:not([type="submit"]),
+  textarea,
+  select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: lightgrey;
+    margin-bottom: 2rem;
+    border: none;
+  }
+
+  input[type="radio"] {
+    width: auto;
+    margin: 0;
+  }
+
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  textarea {
+    height: 20rem;
+  }
+
+  .forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .boton {
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+  }
+
+  .boton-verde {
+    background-color: seagreen;
+    text-decoration: none;
+  }
+
+
+
+  /*.........FIN CONTACTENOS...........*/
+
+
+  /*.........PRODUCTOS...........*/
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .grid-container>div {
+    height: 200px;
+    align-content: center;
+    background-color: #CCC2B6;
+    border: 1px solid blue;
+    text-align: center;
+    font-size: 20px;
+  }
+
+
+
+  /*.........FIN PRODUCTOS...........*/
