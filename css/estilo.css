@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap');
 
-
+/*
 :root{
   --principal: #CCC2B6;
   --secundario: #00F08C;
@@ -8,292 +8,218 @@
   --importante: #F02500;
   --blanco: #F5F5F5;
 }
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  /** Reset para REMS  62.5% = 10px de 16px **/
+*/
+@font-face{
+  font-family: 'introbold';
+  src: url(/fullstack_2024_c24141_grupo_12-main/fuentes/Intro\ Black\ Alt.otf);
+  font-weight: bold;
+  font-style: bold;
 }
-
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+@font-face{
+  font-family: 'introregular';
+  src: url(/fullstack_2024_c24141_grupo_12-main/fuentes/Intro\ Regular\ Alt.otf);
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face{
+  font-family: 'introbook';
+  src: url(/fullstack_2024_c24141_grupo_12-main/fuentes/Intro\ Book\ Alt.otf);
+ font-weight: normal;
+  font-style: normal;
+}
+* {
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'introregular';
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body{
+ 
+  width: 100%;
   margin: auto;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
+  padding-top: 10px;
 }
-
-
-.contenedor {
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
-img {
-  max-width: 100%;
-}
-
-h1 {
-  font-size: 3.8rem;
-}
-
-h2 {
-  font-size: 3.4rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2.6rem;
-}
-
-/** utilidades **/
-
-.seccion {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.fw-300 {
-  font-weight: 300;
-}
-
-.left-texto {
-  text-align: left;
-}
-
-.centrar-texto {
-  text-align: center;
-}
-
-.d-block {
-  display: block!important;
-}
-
-.contenido-centrado {
-  max-width: 800px;
-}
-
-
-/**botones **/
-
-.boton {
-  color: white;
-  font-weight: 700;
-  font-size: 1.8rem;
-  padding: 1rem 3rem;
-  margin-top: 3rem;
-  display: inline-block;
-  text-align: center;
-  border: none;
-}
-
-.boton:hover {
-  cursor: pointer;
-}
-
-.boton-naranja {
-  background-color: orange;
-  text-decoration: none;
-}
-
-.boton-verde {
-  background-color: seagreen;
-  text-decoration: none;
-}
-
-
-
-/*
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-*/
-
-
-
 
 /*.........menu...........*/
 
 nav ul {
-  list-style-type: none; /* Quitamos las viñetas de la lista */
+  list-style-type: none;
 }
 nav li {
-  display: inline; /* Ítems del menú en una línea horizontal */ 
+  display: inline;
 }
-
-
-.menu {
-  background-color: #CCC2B6; 
-}
-.menu ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.titulosolocaps {
   text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-.menu ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-.menu ul li:last-child {
-  margin-right: 0;
-}
-.menu ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.menu ul li a:hover {
-  transform: translateY(3px); 
-  background-color: #555; 
+
+.titulosolocaps h1 {
+  font-family:'introbold';
+  font-size: 48px;
+  color: #735d78;
+  text-shadow: 1px 1px 2px #666;
+  margin: 0; /* Elimina márgenes predeterminados para un control mejor */
+  padding: 20px;
+ 
+  border-radius: 10px;
+ 
 }
 
 .logo {
-  height: 40px;
+  height: 90px; 
+  width: auto;
+  margin-right: 15px;
 }
+
+
+
 
 
 
 /*.........fin menu...........*/
 
-
-/*.................. slider del index ..............*/
-.slider {
-  text-decoration: none;
+/* Estilo base para la navegación */
+.menu {
+  background-color: #e8c2ca; 
+  text-align: center; /* Centra los elementos dentro del menú */
+  margin: 0; 
+  padding: 0; 
 }
 
-#slider {
-  overflow: hidden;
+.menu ul {
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
 }
 
-/* las imágenes no van a salir del márgen de la pantalla*/
-#slider figure img {
-  width: 20%;
-  float: left;
+.menu li {
+  display: inline-block; 
+  margin-right: -4px; 
 }
 
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 30s slidy infinite;
-  /*el movimiento se va a mantener de forma indefinida -infinito-*/
+.menu a {
+  display: block;
+  padding: 10px 20px; 
+  color: rgb(0, 0, 0); 
+  text-decoration: none; 
+  transition: background-color 0.2s, color 0.2s; 
+}
+
+/* Estilo para el hover de los enlaces */
+.menu a:hover, .menu a:focus {
+  background-color: #b392ac;
+  color: white; 
+  border-radius: 10px;
 }
 
 
-/*esta parte del código define el movimiento de las imágenes a la izquierda*/
-@keyframes slidy {
-  0% {
-    left: 0%;
-  }
 
-  20% {
-    left: 0%;
-  }
-
-  25% {
-    left: -100%;
-  }
-
-  45% {
-    left: -100%;
-  }
-
-  50% {
-    left: -200%;
-  }
-
-  70% {
-    left: -200%;
-  }
-
-  75% {
-    left: -300%;
-  }
-
-  95% {
-    left: -300%;
-  }
-
-  100% {
-    left: -400%;
-  }
-}
 /*..................fin slider del index ..............*/
 
 
 /*........estilo para card index......*/
+img{
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
 
-/* anuncios */
 
-.contenedor-anuncios {
+
+/* Estilo contenedores */
+.carrito{
+  width: 45px;
+  height: auto;
+}
+.contenedor{
+   display: flex;
+   justify-content: center;
+   flex-wrap:wrap ;
+   gap: 50px;
+   margin-bottom: 20px;
+}
+.contenedor div {
+  max-width: 320px;  /* Ejemplo de un ancho máximo */
+  margin: auto;  /* Centrar el contenido si es menor que el máximo */
+}
+.contenedor>div{
+   box-shadow: 0px 0px 5px 0px  rgba(0, 0, 0, 0.75);
+   background-color:#f7d1cd;
+   border-radius: 30x;
+}
+
+.informacion{
+  height: 150px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:15px;
+  
+}
+.informacion>p:first-child{
+  font-family: 'introbook';
+  font-size: 25px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  width: 100%;  
 }
 
-.anuncio {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: calc(33.3% - 1rem);
-  border: 1px solid gray;
-  background: lightgrey;
-  text-align: left;
-  line-height: 2;
-  margin-bottom: 2rem;
+
+.informacion .precio{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'introbold';
+}
+.informacion button{
+  background-color: #d1b3c4;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.1s ease; 
+}
+.informacion button:hover{
+  background-color: #b392ac;
+  transform: scale(1.2); /* Aumenta el tamaño del botón un 10% */
+  
 }
 
-.contenido-anuncio {
-  padding: 2rem;
+
+.pie{
+  background: #f5a84b;
+  border-radius:0 0 15px 15px;
+  padding: 10px;
+  text-align:center;
 }
 
-.contenido-anuncio h3,
-.contenido-anuncio p {
-  margin: 0;
+.pie a{
+  text-decoration: none;
+  color: white;
+}
+.pie a:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: ""
 }
 
-.precio {
-  color: green;
-  font-weight: 900;
-}
-
-.iconos-caracteristicas {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-evenly;
-  flex: 1;
-  max-width: 500px;
-}
-
-.iconos-caracteristicas li {
-  display: flex;
-}
-
-.iconos-caracteristicas img {
-  margin-right: 2rem;
-}
-
-.ver-todas {
-  display: flex;
-  justify-content: flex-end;
-}
 
 
 
@@ -311,19 +237,23 @@ nav li {
   text-align: center;
 }
 
-.barra-cafe {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  
-}
-
 /*.........fin barra compra online...........*/
 
 /*.........FOOTER...........*/
+/*
+.footer {
+  /*position: fixed;*/
+  /*display: block;
+  bottom: 0;
+  background-color: #f1f1f1;
+  text-align: center;
+  width: 100%;
+}
+*/
 
 footer{
   grid-area: footer;
-  background-color: #CCC2B6;
+  background-color: var(--principal);
   padding: 10px;
   color: var(--blanco);
   font-size: 1.2em;
