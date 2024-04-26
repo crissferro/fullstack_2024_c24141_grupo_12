@@ -105,12 +105,12 @@
         </button>
       </div>
       <!--fin de carrusel-->
-
-      <section class="contenedor_contacto seccion contenido-centrado">
-        <h2 class="centrar-texto">Llena el Formulario de Contacto</h2>
+      <br><br>
+      <section>
+        <h2>Llena el Formulario de Contacto</h2>
         <br /><br />
 
-        <form action="" class="contacto">
+        <form action="" class="contenedor_contacto">
           <fieldset>
             <legend>Información Personal</legend>
 
@@ -129,9 +129,9 @@
             <input type="tel" id="telefono" placeholder="Tu Teléfono" />
 
             <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje">Deja tu mensaje</textarea>
+            <textarea name="mensaje" id="mensaje" placeholder="Deja tu mensaje"></textarea>
           </fieldset>
-
+          <br>
           <fieldset>
             <legend>Contacto</legend>
 
@@ -151,14 +151,16 @@
 
             <label for="hora">Hora:</label>
             <input type="time" id="hora" min="9:00" max="18:00" />
+          
+          </fieldset>
+          <fieldset>
+            <input
+                      type="submit"
+                      value="Enviar"
+                      onclick="return validarEmail()"
+                    />
           </fieldset>
 
-          <input
-            type="submit"
-            value="Enviar"
-            class="boton boton-verde"
-            onclick="return validarEmail()"
-          />
         </form>
       </section>
     </main>
