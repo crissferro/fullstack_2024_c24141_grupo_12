@@ -206,7 +206,7 @@
 
   .informacion>p:first-child {
     font-family: 'introbook';
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
