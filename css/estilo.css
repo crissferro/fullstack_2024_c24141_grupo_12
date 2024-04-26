@@ -111,10 +111,6 @@
   }
 
 
-
-
-
-
   /*.........fin menu...........*/
 
   /* Estilo base para la navegación */
@@ -152,6 +148,9 @@
     border-radius: 10px;
   }
 
+  .activo {
+    background-color: #b392ac;
+  }
 
 
   /*..................fin slider del index ..............*/
@@ -162,7 +161,7 @@
     width: 320px;
     height: 340px;
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
 
 
