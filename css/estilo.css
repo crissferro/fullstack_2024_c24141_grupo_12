@@ -45,8 +45,6 @@ section {
 }
 
 
-
-
 /*......... inicio menu...........*/
 
 nav {
@@ -114,7 +112,12 @@ nav ul li a:hover, nav ul li a:focus {
 
 /*.........fin menu...........*/
 
-
+.flotante {
+  display:scroll;
+      position:fixed;
+      bottom:320px;
+      right:0px;
+}
 
 
 /*........estilo para card index......*/
