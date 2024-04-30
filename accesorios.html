@@ -25,205 +25,176 @@
         <!-- <img class="carrito" src="./img/img-nuevas/carrito.png" alt="" /> -->
   
     </header>
-      <!--carrusel inicio-->
-      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="./img/banner1.jpg"
-              class="w-100"
-              alt="baner1"
-            />
+    <main>
+          <!--carrusel boostrap inicio-->
+    <section id="slider">
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./img/banner1.jpg"
+                class="d-block w-100" alt="banner1" />
+            </div>
+            <div class="carousel-item">
+              <img src="./img/banner3.jpg" class="d-block w-100"
+                alt="banner2" />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/banner5.jpg"
+                class="d-block w-100" alt="banner3" />
+            </div>
           </div>
-          <div class="carousel-item">
-            <img
-              src="./img/banner3.jpg"
-              class="w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./img/banner5.jpg"
-              class="w-100"
-              alt="baner2"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleRide"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleRide"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
       </div>
-      <br /><br />
-      <!--fin de carrusel-->
-      <section>
-        <h2>Tazas</h2>
-        <br /><br />
-        <div class="contenedor" id="tazas">
-          <div>
-            <img src="img/tazas_nespresso.png" alt="taza nespresso" />
-            <div class="informacion">
-              <p>
-                Taza Nespresso. <br />
-                Touch suave al tacto.
-              </p>
-              <p class="precio">$ 9751</p>
-              <button>Comprar</button>
-            </div>
-          </div>
+</section>
 
-          <div>
-            <img src="img/tazas_nespresso2.png" alt="taza nespresso" />
-            <div class="informacion">
-              <p>
-                Taza Nespresso. <br />
-                Cristal, incluye plato metalico
-              </p>
-              <p class="precio">$ 11500</p>
-              <button>Comprar</button>
-            </div>
-          </div>
+<!--fin de carrusel-->
 
-          <div>
-            <img src="img/tazas_dolce2.jpg" alt="taza dolce gusto" />
-            <div class="informacion">
-              <p>
-                Taza Dolce Gusto. <br />
-                Asa de Goma para mayor comodidad
-              </p>
-              <p class="precio">$ 7000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
+<section id="accesorios">
+  <h2>Tazas</h2>
+  <article>      <img src="img/tazas_nespresso.png" alt="taza nespresso" />
+      <div>
+        <p>
+          Taza Nespresso. <br />
+          Touch suave al tacto.
+        </p>
+        <p class="precio">$ 9751</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+  <article>      <img src="img/tazas_nespresso2.png" alt="taza nespresso" />
+      <div>
+        <p>
+          Taza Nespresso. <br />
+          Cristal, incluye plato metalico
+        </p>
+        <p class="precio">$ 11500</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+  <article>      <img src="img/tazas_dolce2.jpg" alt="taza dolce gusto" />
+      <div>
+        <p>
+          Taza Dolce Gusto. <br />
+          Asa de Goma para mayor comodidad
+        </p>
+        <p class="precio">$ 7000</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+  <article>      <img src="img/tazas_dolce3.jpg" alt="taza dolce gusto" />
+      <div>
+        <p>
+          Taza Dolce Gusto. <br />
+          Ceramica, incluye plato.
+        </p>
+        <p class="precio">$ 8000</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+</section>
 
-          <div>
-            <img src="img/tazas_dolce3.jpg" alt="taza dolce gusto" />
-            <div class="informacion">
-              <p>
-                Taza Dolce Gusto. <br />
-                Ceramica, incluye plato.
-              </p>
-              <p class="precio">$ 8000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br /><br />
-      <section>
-        <h2>Porta Capsulas</h2>
-        <br /><br />
-        <div class="contenedor" id="porta_capsulas">
-          <div>
-            <img src="img/porta_capsulas2.jpg" alt="Porta Capsulas Nespresso" />
-            <div class="informacion">
-              <p>
-                Porta Capsulas Nespresso. <br />
-                Materiales Bamboo y Acrilico. <br />
-                Capacidad 12 capsulas.
-              </p>
-              <p class="precio">$ 30000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
+<section id="porta_capsulas">
+  <h2>Porta Capsulas</h2>
+<article>
+      <img src="img/porta_capsulas2.jpg" alt="Porta Capsulas Nespresso" />
+      <div>
+        <p>
+          Porta Capsulas Nespresso. <br />
+          Materiales Bamboo y Acrilico. <br />
+          Capacidad 12 capsulas.
+        </p>
+        <p class="precio">$ 30000</p>
+        <button>Comprar</button>
+      </div>
+</article>
+<article>
+        <img src="img/porta_capsulas3.jpg" alt="Porta Capsulas Nespresso" />
+      <div>
+        <p>
+          Porta Capsulas Nespresso. <br />
+          Materiales Acrilico. <br />
+          Capacidad 25 capsulas.
+        </p>
+        <p class="precio">$ 40000</p>
+        <button>Comprar</button>
+      </div>
+</article>
+<article>
+        <img
+        src="img/porta_capsulas6.jpg"
+        alt="Porta Capsulas Dolce Gusto"
+      />
+      <div>
+        <p>
+          Porta Capsulas Dolce Gusto. <br />
+          Materiales Metálico. <br />
+          Capacidad 20 capsulas.
+        </p>
+        <p class="precio">$ 18000</p>
+        <button>Comprar</button>
+      </div>
+</article>
+<article>
+        <img
+        src="img/porta_capsulas8.jpg"
+        alt="Porta Capsulas Dolce Gusto"
+      />
+      <div>
+        <p>
+          Porta Capsulas Dolce Gusto. <br />
+          Materiales Metal con Iman. <br />
+          Capacidad 14 capsulas.
+        </p>
+        <p class="precio">$ 25000</p>
+        <button>Comprar</button>
+      </div>
+</article>
+</section>
+<section id="recargables">
+  <h2>Cápsulas Recargables</h2>
 
-          <div>
-            <img src="img/porta_capsulas3.jpg" alt="Porta Capsulas Nespresso" />
-            <div class="informacion">
-              <p>
-                Porta Capsulas Nespresso. <br />
-                Materiales Acrilico. <br />
-                Capacidad 25 capsulas.
-              </p>
-              <p class="precio">$ 40000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
+  <article>
+      <img
+        src="img/dolcegusto.jpg"
+        alt="Capsulas Recargables Dolce Gusto"
+      />
+      <div>
+        <p>
+          Porta Capsulas Nespresso. <br />
+          Materiales Bamboo y Acrilico. <br />
+          Capacidad 12 capsulas.
+        </p>
+        <p class="precio">$ 5000</p>
+        <button>Comprar</button>
+      </div>
+  </article>
+  <article>
+          <img src="img/nespresso.png" alt="Capsulas Recargables Nespresso" />
+      <div>
+        <p>
+          Porta Capsulas Nespresso. <br />
+          Materiales Acrilico. <br />
+          Capacidad 25 capsulas.
+        </p>
+        <p class="precio">$ 5000</p>
+        <button>Comprar</button>
+      </div>
+  </article>
 
-          <div>
-            <img
-              src="img/porta_capsulas6.jpg"
-              alt="Porta Capsulas Dolce Gusto"
-            />
-            <div class="informacion">
-              <p>
-                Porta Capsulas Dolce Gusto. <br />
-                Materiales Metálico. <br />
-                Capacidad 20 capsulas.
-              </p>
-              <p class="precio">$ 18000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="img/porta_capsulas8.jpg"
-              alt="Porta Capsulas Dolce Gusto"
-            />
-            <div class="informacion">
-              <p>
-                Porta Capsulas Dolce Gusto. <br />
-                Materiales Metal con Iman. <br />
-                Capacidad 14 capsulas.
-              </p>
-              <p class="precio">$ 25000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Cápsulas Recargables</h2>
-        <br /><br />
-        <div class="contenedor" id="capsulas_recargables">
-          <div>
-            <img
-              src="img/dolcegusto.jpg"
-              alt="Capsulas Recargables Dolce Gusto"
-            />
-            <div class="informacion">
-              <p>
-                Porta Capsulas Nespresso. <br />
-                Materiales Bamboo y Acrilico. <br />
-                Capacidad 12 capsulas.
-              </p>
-              <p class="precio">$ 5000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
-          <div>
-            <img src="img/nespresso.png" alt="Capsulas Recargables Nespresso" />
-            <div class="informacion">
-              <p>
-                Porta Capsulas Nespresso. <br />
-                Materiales Acrilico. <br />
-                Capacidad 25 capsulas.
-              </p>
-              <p class="precio">$ 5000</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br /><br />
+</section>
     </main>
+      
+      
+
     <footer>
       <div class="footer">
         <a class="redsoc" href="#"><i class="fa-brands fa-facebook"></i></a>

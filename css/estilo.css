@@ -227,6 +227,183 @@ section {
 }
 
 
+#porta_capsulas {
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px 24px;
+  justify-content: space-between;
+}
+
+#porta_capsulas article {
+  width: 336px;
+  height: 500px;
+  border: 1px solid #07b2ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#porta_capsulas article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+#porta_capsulas h2 {
+  width: 100%;
+  color: #202630;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+#porta_capsulas p {
+  font-size: small;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#porta_capsulas button {
+  background-color: #d1b3c4;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.1s ease;
+}
+
+#porta_capsulas button:hover {
+  background-color: #b392ac;
+  transform: scale(1.2);
+  /* Aumenta el tamaño del botón un 10% */
+}
+
+#porta_capsulas button a {
+  text-decoration: none;
+}
+
+
+#recargables {
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px 24px;
+  justify-content: space-between;
+}
+
+#recargables article {
+  width: 336px;
+  height: 500px;
+  border: 1px solid #07b2ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#recargables article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+#recargables h2 {
+  width: 100%;
+  color: #202630;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+#recargables p {
+  font-size: small;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#recargables button {
+  background-color: #d1b3c4;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.1s ease;
+}
+
+#recargables button:hover {
+  background-color: #b392ac;
+  transform: scale(1.2);
+  /* Aumenta el tamaño del botón un 10% */
+}
+
+#recargables button a {
+  text-decoration: none;
+}
+
+
+#cafes {
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px 24px;
+  justify-content: space-between;
+}
+
+#cafes article {
+  width: 336px;
+  height: 500px;
+  border: 1px solid #07b2ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#cafes article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+#cafes h2 {
+  width: 100%;
+  color: #202630;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+#cafes p {
+  font-size: small;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#cafes button {
+  background-color: #d1b3c4;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.1s ease;
+}
+
+#cafes button:hover {
+  background-color: #b392ac;
+  transform: scale(1.2);
+  /* Aumenta el tamaño del botón un 10% */
+}
+
+#cafes button a {
+  text-decoration: none;
+}
+
+
 
 
 .flotante {
@@ -295,8 +472,8 @@ img {
 }
 
 
-.informacion .precio {
-  font-size: 20px;
+.precio {
+  font-size: 30px;
   font-weight: 500;
   font-family: 'introbold';
 }

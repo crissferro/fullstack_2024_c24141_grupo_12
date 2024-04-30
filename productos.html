@@ -30,66 +30,49 @@
   
     </header>
     <main>
-      <!--carrusel inicio-->
-      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="./img/banner1.jpg"
-              class="w-100"
-              alt="baner1"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./img/banner3.jpg"
-              class="w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./img/banner5.jpg"
-              class="w-100"
-              alt="baner2"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleRide"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleRide"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+          <!--carrusel boostrap inicio-->
+          <section id="slider">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./img/banner1.jpg"
+                      class="d-block w-100" alt="banner1" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/banner3.jpg" class="d-block w-100"
+                      alt="banner2" />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="./img/banner5.jpg"
+                      class="d-block w-100" alt="banner3" />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+      </section>
+      
       <!--fin de carrusel-->
 
       <!--    Productos    -->
 
-      <br /><br />
-
-      <section class="contenido-centrado">
+      <section id="capsulas">
         <h2>Cápsulas</h2>
-        <br /><br />
-        <div class="contenedor" id="capsulas">
-          <div>
-            <img
+
+<article>
+              <img
               src="./img/img-nuevas/nescafe capuccino.webp"
               alt="producto1"
             />
-            <div class="informacion">
+            <div>
               <p>
                 Capsula cappucino Nescafe <br />
                 Cantidad: 16
@@ -97,11 +80,12 @@
               <p class="precio">$7999</p>
               <button>Comprar</button>
             </div>
-          </div>
+</article>
 
-          <div>
-            <img src="./img/img-nuevas/nescafe expreso.webp" alt="producto2" />
-            <div class="informacion">
+
+<article>
+              <img src="./img/img-nuevas/nescafe expreso.webp" alt="producto2" />
+            <div>
               <p>
                 Capsula expresso Nescafe <br />
                 Cantidad: 16
@@ -109,14 +93,17 @@
               <p class="precio">$7999</p>
               <button>Comprar</button>
             </div>
-          </div>
+</article>
 
-          <div>
-            <img
+
+
+
+<article>
+              <img
               src="./img/img-nuevas/starbuckscapsulas2.webp"
               alt="producto3"
             />
-            <div class="informacion">
+            <div>
               <p>
                 Capsula STARBUCKS tostado medio <br />
                 Cantidad: 10
@@ -124,14 +111,16 @@
               <p class="precio">$7999</p>
               <button>Comprar</button>
             </div>
-          </div>
+</article>
 
-          <div>
-            <img
+
+
+<article>
+              <img
               src="./img/img-nuevas/starbucksamericana.png"
               alt="producto4"
             />
-            <div class="informacion">
+            <div>
               <p>
                 Capsula STARBUCKS tostado medio <br />
                 Cantidad: 12
@@ -139,17 +128,17 @@
               <p class="precio">$7999</p>
               <button>Comprar</button>
             </div>
-          </div>
-        </div>
+</article>
+
+
       </section>
-      <br /><br />
-      <section>
+
+      <section id="cafes">
         <h2>Cafe de Especialidad</h2>
-        <br /><br />
-        <div class="contenedor" id="cafe_especialidad">
-          <div>
-            <img src="img/peru.png" alt="cafe peru" />
-            <div class="informacion">
+
+<article>
+              <img src="img/peru.png" alt="cafe peru" />
+            <div>
               <p>
                 Auténtico café de Perú. Granos 100% arábigos typica, bourbon y
                 caturra, libre de defectos. <br />
@@ -159,11 +148,12 @@
               <p class="precio">$ 9751</p>
               <button>Comprar</button>
             </div>
-          </div>
+</article>
 
-          <div>
-            <img src="img/italia.jpg" alt="cafe italia" />
-            <div class="informacion">
+
+<article>
+              <img src="img/italia.jpg" alt="cafe italia" />
+            <div>
               <p>
                 VITA es el resultado de un viaje de inspiración en donde
                 buscamos combinar granos exclusivamente arábigos de diferentes
@@ -173,11 +163,14 @@
               <p class="precio">$ 11096</p>
               <button>Comprar</button>
             </div>
-          </div>
+</article>
 
-          <div>
-            <img src="img/colombia.png" alt="cafe colombia" />
-            <div class="informacion">
+
+
+
+<article>
+              <img src="img/colombia.png" alt="cafe colombia" />
+            <div>
               <p>
                 Café Tostado Natural de origen colombiano, 100% arábigo. Único
                 café con el aval de la Federación Nacional de Cafeteros de
@@ -186,11 +179,12 @@
               <p class="precio">$ 11233</p>
               <button>Comprar</button>
             </div>
-          </div>
+</article>
 
-          <div>
-            <img src="img/brasil.png" alt="cafe brasil" />
-            <div class="informacion">
+
+<article>
+              <img src="img/brasil.png" alt="cafe brasil" />
+            <div>
               <p>
                 Café de Origen 100% arábigo brasileño. <br />Este café nos
                 ofrece notas de cata sabor a chocolate, nuez y caramelo.
@@ -198,10 +192,11 @@
               <p class="precio">$ 10675</p>
               <button>Comprar</button>
             </div>
-          </div>
-        </div>
+</article>
+
+
       </section>
-      <br /><br />
+
     </main>
     <footer>
       <div class="footer">
