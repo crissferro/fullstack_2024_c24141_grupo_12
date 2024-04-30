@@ -28,50 +28,60 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'introregular';
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
   text-decoration: none;
 }
 
 body {
   width: 100%;
   margin: auto;
-  padding-top: 10px;
+  font-family: 'introregular';
 }
-
-section {
-  width: 1000px;
-  margin: auto;
-}
-
 
 /*......... inicio menu...........*/
 
-nav {
-  background-color: #e8c2ca;
-  /* Centra los elementos dentro del menú */
+header div {
+  width: 100%;
+  height: 104px;
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-nav ul {
-  list-style-type: none;
+header div img {
+  height: 90px;
+  width: auto;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: -4px;
+header div h1 {
+  font-family: 'introbold';
+  font-size: 48px;
+  color: #735d78;
+  text-shadow: 1px 1px 2px #666;
+  margin: 0;
+  /* Elimina márgenes predeterminados para un control mejor */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-nav ul li a {
-  display: block;
-  padding: 10px 20px;
-  color: rgb(0, 0, 0);
+header nav {
+  background-color: #e8c2ca;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
   text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px;
   transition: background-color 0.2s, color 0.2s;
 }
 
-/* Estilo para el hover de los enlaces */
-nav ul li a:hover, nav ul li a:focus {
+header nav a:hover, header nav a:focus {
   background-color: #b392ac;
   color: white;
   border-radius: 10px;
@@ -81,36 +91,143 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #b392ac;
 }
 
-.titulosolocaps {
+/*.........fin menu...........*/
+
+
+section {
+  width: 1100px;
+  margin: auto;
+}
+
+/*       inicio slider      */
+
+
+#slider {
+  width: 100%;
+
+}
+
+
+
+/*       inicio productos y accesorios      */
+#capsulas {
+  height: auto;
   text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Centra los elementos horizontalmente */
-  margin-top: 50px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  padding: 32px 24px;
+  justify-content: space-between;
 }
 
-.titulosolocaps h1 {
-  font-family: 'introbold';
-  font-size: 48px;
-  color: #735d78;
-  text-shadow: 1px 1px 2px #666;
-  margin: 0;
-  /* Elimina márgenes predeterminados para un control mejor */
-  padding: 20px;
+#capsulas article {
+  width: 336px;
+  height: 500px;
+  border: 1px solid #07b2ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 
+#capsulas article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+#capsulas h2 {
+  width: 100%;
+  color: #202630;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+#capsulas p {
+  font-size: small;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#capsulas button {
+  background-color: #d1b3c4;
+  width: 100px;
+  height: 35px;
   border-radius: 10px;
-
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.1s ease;
 }
 
-.logo {
-  height: 90px;
-  width: auto;
-  margin-right: 15px;
+#capsulas button:hover {
+  background-color: #b392ac;
+  transform: scale(1.2);
+  /* Aumenta el tamaño del botón un 10% */
 }
 
-/*.........fin menu...........*/
+#capsulas button a {
+  text-decoration: none;
+}
+
+
+#accesorios {
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px 24px;
+  justify-content: space-between;
+}
+
+#accesorios article {
+  width: 336px;
+  height: 500px;
+  border: 1px solid #07b2ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#accesorios article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#accesorios h2 {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+
+#accesorios button {
+  background-color: #d1b3c4;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.1s ease;
+}
+
+#accesorios button:hover {
+  background-color: #b392ac;
+  transform: scale(1.2);
+  /* Aumenta el tamaño del botón un 10% */
+}
+
+#accesorios button a {
+  text-decoration: none;
+}
+
+#accesorios p {
+  font-size: small;
+  text-align: left;
+  padding-left: 10px;
+}
+
+
+
 
 .flotante {
   display:scroll;
@@ -130,7 +247,7 @@ img {
 
 
 
-/* Estilo contenedores */
+/* Estilo card */
 .carrito {
   width: 45px;
   height: auto;
@@ -206,17 +323,7 @@ img {
 
 /*.........fin card...........*/
 
-/*.........barra compra online...........*/
 
-.barra-online {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #CCC2B6;
-  font-size: 40px;
-  text-align: center;
-}
-
-/*.........fin barra compra online...........*/
 
 /*.........FOOTER...........*/
 
