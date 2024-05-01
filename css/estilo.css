@@ -81,7 +81,8 @@ header nav a {
   transition: background-color 0.2s, color 0.2s;
 }
 
-header nav a:hover, header nav a:focus {
+header nav a:hover,
+header nav a:focus {
   background-color: #b392ac;
   color: white;
   border-radius: 10px;
@@ -95,7 +96,7 @@ header nav a:hover, header nav a:focus {
 
 
 section {
-  width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -104,7 +105,7 @@ section {
 
 #slider {
   width: 100%;
-
+  max-width: none;
 }
 
 
@@ -124,11 +125,12 @@ section {
   height: 500px;
   border: 1px solid #07b2ff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
 #capsulas article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -183,11 +185,12 @@ section {
   height: 500px;
   border: 1px solid #07b2ff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
 #accesorios article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 #accesorios h2 {
@@ -241,11 +244,12 @@ section {
   height: 500px;
   border: 1px solid #07b2ff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
 #porta_capsulas article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -300,11 +304,12 @@ section {
   height: 500px;
   border: 1px solid #07b2ff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
 #recargables article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -359,11 +364,12 @@ section {
   height: 500px;
   border: 1px solid #07b2ff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
 #cafes article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -407,10 +413,10 @@ section {
 
 
 .flotante {
-  display:scroll;
-      position:fixed;
-      bottom:320px;
-      right:0px;
+  display: scroll;
+  position: fixed;
+  bottom: 320px;
+  right: 0px;
 }
 
 
@@ -621,3 +627,36 @@ input[type="submit"]:hover {
 
 
 /*.........FIN PRODUCTOS...........*/
+
+
+@media screen and (max-width: 760px) and (min-width: 1px) {
+  
+  #capsulas {
+    justify-content: center;
+  }
+  
+  #accesorios {
+    justify-content: center;
+  }
+
+  #porta_capsulas{
+    justify-content: center;
+  }
+
+  #recargables {
+    justify-content: center;
+  }
+
+  /* #productosAdaptable{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  } */
+}
+
+@media screen and (max-width: 991px) and (min-width: 760px) {
+
+  /* #productosAdaptable{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  } */
+}
