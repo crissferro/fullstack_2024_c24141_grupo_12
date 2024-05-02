@@ -608,21 +608,6 @@ input[type="submit"]:hover {
 
 /*.........PRODUCTOS...........*/
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-  padding: 10px;
-}
-
-.grid-container>div {
-  height: 200px;
-  align-content: center;
-  background-color: #CCC2B6;
-  border: 1px solid blue;
-  text-align: center;
-  font-size: 20px;
-}
 
 
 
