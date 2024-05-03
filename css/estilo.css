@@ -111,304 +111,83 @@ section {
 
 
 /*       inicio productos y accesorios      */
-#capsulas {
-  height: auto;
-  text-align: center;
+/*........inicio card......*/
+img {
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 0px 0px 0px 0px;
+}
+
+
+.tarjeta {
   display: flex;
   flex-wrap: wrap;
-  padding: 32px 24px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 16px;
 }
 
-#capsulas article {
-  width: 336px;
-  height: 500px;
-  border: 1px solid #07b2ff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
-}
-
-#capsulas article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-#capsulas h2 {
+.tarjeta h2 {
   width: 100%;
   color: #202630;
   font-size: 24px;
+  margin-top: 32px;
   margin-bottom: 32px;
 }
 
-#capsulas p {
-  font-size: small;
-  text-align: left;
-  padding-left: 10px;
+.tarjeta article {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width: auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
 }
 
-#capsulas button {
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease;
+.tarjeta article h4 {
+  font-size: 24px;
+  padding: 10px 10px 0 10px;;
 }
 
-#capsulas button:hover {
-  background-color: #b392ac;
-  transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
+.tarjeta article .cuerpo {
+  padding: 10px;
+  flex: 1 1 100%;
 }
 
-#capsulas button a {
+.tarjeta article .precio {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'introbold';
+}
+
+.tarjeta article .pie {
+  background: #d1b3c4;
+  border-radius:0 0 15px 15px;
+  padding: 10px;
+  text-align:center;
+}
+
+.tarjeta article .pie a {
   text-decoration: none;
+  color: white;
 }
 
-
-#accesorios {
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 32px 24px;
-  justify-content: space-between;
+.tarjeta article .pie a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: ""
 }
 
-#accesorios article {
-  width: 336px;
-  height: 500px;
-  border: 1px solid #07b2ff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
-}
-
-#accesorios article:hover {
+.tarjeta article:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-#accesorios h2 {
-  width: 100%;
-  font-size: 24px;
-  margin-bottom: 32px;
-}
-
-
-#accesorios button {
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease;
-}
-
-#accesorios button:hover {
-  background-color: #b392ac;
-  transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
-}
-
-#accesorios button a {
-  text-decoration: none;
-}
-
-#accesorios p {
-  font-size: small;
-  text-align: left;
-  padding-left: 10px;
-}
-
-
-#porta_capsulas {
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 32px 24px;
-  justify-content: space-between;
-}
-
-#porta_capsulas article {
-  width: 336px;
-  height: 500px;
-  border: 1px solid #07b2ff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
-}
-
-#porta_capsulas article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-#porta_capsulas h2 {
-  width: 100%;
-  color: #202630;
-  font-size: 24px;
-  margin-bottom: 32px;
-}
-
-#porta_capsulas p {
-  font-size: small;
-  text-align: left;
-  padding-left: 10px;
-}
-
-#porta_capsulas button {
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease;
-}
-
-#porta_capsulas button:hover {
-  background-color: #b392ac;
-  transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
-}
-
-#porta_capsulas button a {
-  text-decoration: none;
-}
-
-
-#recargables {
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 32px 24px;
-  justify-content: space-between;
-}
-
-#recargables article {
-  width: 336px;
-  height: 500px;
-  border: 1px solid #07b2ff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
-}
-
-#recargables article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-#recargables h2 {
-  width: 100%;
-  color: #202630;
-  font-size: 24px;
-  margin-bottom: 32px;
-}
-
-#recargables p {
-  font-size: small;
-  text-align: left;
-  padding-left: 10px;
-}
-
-#recargables button {
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease;
-}
-
-#recargables button:hover {
-  background-color: #b392ac;
-  transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
-}
-
-#recargables button a {
-  text-decoration: none;
-}
-
-
-#cafes {
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 32px 24px;
-  justify-content: space-between;
-}
-
-#cafes article {
-  width: 336px;
-  height: 500px;
-  border: 1px solid #07b2ff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
-}
-
-#cafes article:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-#cafes h2 {
-  width: 100%;
-  color: #202630;
-  font-size: 24px;
-  margin-bottom: 32px;
-}
-
-#cafes p {
-  font-size: small;
-  text-align: left;
-  padding-left: 10px;
-}
-
-#cafes button {
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease;
-}
-
-#cafes button:hover {
-  background-color: #b392ac;
-  transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
-}
-
-#cafes button a {
-  text-decoration: none;
-}
-
+/*........fin card......*/
 
 
 
@@ -420,93 +199,11 @@ section {
 }
 
 
-/*........estilo para card index......*/
-img {
-  width: 320px;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 0px 0px 0px 0px;
-}
-
-
-
 /* Estilo card */
 .carrito {
   width: 45px;
   height: auto;
 }
-
-.contenedor {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-bottom: 20px;
-}
-
-.contenedor div {
-  max-width: 320px;
-  /* Ejemplo de un ancho máximo */
-  margin: auto;
-  /* Centrar el contenido si es menor que el máximo */
-}
-
-.contenedor>div {
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  background-color: #f7d1cd;
-  border-radius: 30x;
-}
-
-.informacion {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 15px;
-
-}
-
-.informacion>p:first-child {
-  font-family: 'introbook';
-  font-size: 15px;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-}
-
-
-.precio {
-  font-size: 30px;
-  font-weight: 500;
-  font-family: 'introbold';
-}
-
-.informacion button {
-  background-color: #d1b3c4;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 17px;
-  font-weight: 300;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, background-color 0.1s ease;
-}
-
-.informacion button:hover {
-  background-color: #b392ac;
-  transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
-}
-
-
-/*.........fin card...........*/
-
-
 
 /*.........FOOTER...........*/
 
