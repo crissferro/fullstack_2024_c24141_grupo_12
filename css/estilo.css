@@ -81,8 +81,7 @@ header nav a {
   transition: background-color 0.2s, color 0.2s;
 }
 
-header nav a:hover,
-header nav a:focus {
+header nav a:hover {
   background-color: #b392ac;
   color: white;
   border-radius: 10px;
@@ -106,19 +105,16 @@ section {
 #slider {
   width: 100%;
   max-width: none;
+  margin-bottom: 24px;
 }
-
-
+#slider img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+}
 
 /*       inicio productos y accesorios      */
 /*........inicio card......*/
-img {
-  width: 320px;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 0px 0px 0px 0px;
-}
-
 
 .tarjeta {
   display: flex;
@@ -150,6 +146,13 @@ img {
   padding: 10px 10px 0 10px;;
 }
 
+.tarjeta article img {
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 0px 0px 0px 0px;
+}
+
 .tarjeta article .cuerpo {
   padding: 10px;
   flex: 1 1 100%;
@@ -174,7 +177,6 @@ img {
 }
 
 .tarjeta article .pie a::after {
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -199,11 +201,6 @@ img {
 }
 
 
-/* Estilo card */
-.carrito {
-  width: 45px;
-  height: auto;
-}
 
 /*.........FOOTER...........*/
 
@@ -211,6 +208,7 @@ footer {
   background-color: #e8c2ca;
   padding: 10px;
   text-align: center;
+  margin-top: 56px;
 }
 
 
