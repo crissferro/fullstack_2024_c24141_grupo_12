@@ -113,7 +113,6 @@ section {
     object-fit: cover;
 }
 
-/*       inicio productos y accesorios      */
 /*........inicio card......*/
 
 .tarjeta {
@@ -141,7 +140,7 @@ section {
   border-radius:15px;
 }
 
-.tarjeta article h4 {
+.tarjeta article h3 {
   font-size: 24px;
   padding: 10px 10px 0 10px;;
 }
@@ -221,7 +220,7 @@ footer {
 /*.........CONTACTENOS...........*/
 
 .contenedor_contacto {
-  max-width: 120rem;
+  max-width: 1200px;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
