@@ -184,7 +184,8 @@ section {
   content: ""
 }
 
-.tarjeta article:hover {
+.tarjeta article
+:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -219,65 +220,48 @@ footer {
 
 /*.........CONTACTENOS...........*/
 
-.contenedor_contacto {
-  max-width: 1200px;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-legend {
-  font-size: 2rem;
-  color: rgb(32, 32, 32);
-}
-
-label {
-  display: block;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.contacto p {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: rgb(32, 32, 32);
-  margin: 2rem 0 0 0;
-}
-
-input:not([type="submit"]),
-textarea,
-select {
-  padding: 1rem;
-  display: block;
+#contacto h2 {
   width: 100%;
-  background-color: lightgrey;
-  margin-bottom: 2rem;
-  border: none;
+  color: #202630;
+  font-size: 24px;
+  margin-top: 56px;
+  margin-bottom: 32px;
 }
 
-input[type="radio"] {
+form{
+	width:1100px;
+	padding:16px;
+	margin:auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+}
+
+
+form label{
+	width:72px;
+	font-weight: bold;
+	display: flex;
+  flex-direction:column;
+  justify-content:space-between;
   width: auto;
-  margin: 0;
 }
 
-select {
-  -webkit-appearance: none;
-  appearance: none;
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"]{
+	width:450px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
 }
 
-textarea {
-  height: 15rem;
-}
-
-.forma-contacto {
-  max-width: 30rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-input[type="submit"] {
+form input[type="submit"]{
+	width:50%;
+	margin-top:32px;
   border: none;
   border-radius: 10px;
   background-color: #d1b3c4;
@@ -287,26 +271,30 @@ input[type="submit"] {
   font-size: 25px;
   width: 150px;
   height: 40px;
-}
+} 
 
-input[type="submit"]:hover {
+form input[type="submit"]:hover{
   border: none;
   background-color: #b392ac;
   transform: scale(1.2);
-  /* Aumenta el tamaño del botón un 10% */
 }
 
+textarea{
+	width:450px;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
 
 /*.........FIN CONTACTENOS...........*/
 
 
-/*.........PRODUCTOS...........*/
-
-
-
-
-/*.........FIN PRODUCTOS...........*/
-
+/*..........responsive.............*/
 
 @media screen and (max-width: 760px) and (min-width: 1px) {
   

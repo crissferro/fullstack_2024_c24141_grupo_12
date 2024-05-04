@@ -67,13 +67,12 @@
     </div>
 
     <!--fin de carrusel-->
-    <br><br>
-    <section>
-      <h2>Llena el Formulario de Contacto</h2>
-      <br /><br />
+    <!-- inicio formulario -->
+    <section id="contacto">
+      <h2>Completa el Formulario de Contacto</h2>
 
-      <form action="" class="contenedor_contacto">
-        <fieldset>
+      <form action="">
+        <fieldset id="datos_personales">
           <legend>Información Personal</legend>
 
           <label for="nombre">Nombre:</label>
@@ -88,8 +87,8 @@
           <label for="mensaje">Mensaje:</label>
           <textarea name="mensaje" id="mensaje" placeholder="Deja tu mensaje"></textarea>
         </fieldset>
-        <br>
-        <fieldset>
+        <!-- datos contacto -->
+        <fieldset id="datos_contacto">
           <legend>Contacto</legend>
 
           <p>Como desea ser contactado:</p>
@@ -110,7 +109,7 @@
           <input type="time" id="hora" min="9:00" max="18:00"/>
 
         </fieldset>
-        <fieldset>
+        <fieldset id="boton_contacto">
           <input type="submit" value="Enviar" onclick="return validarEmail()"/>
         </fieldset>
 
