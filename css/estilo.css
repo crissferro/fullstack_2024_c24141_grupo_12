@@ -184,8 +184,7 @@ section {
   content: ""
 }
 
-.tarjeta article
-:hover {
+.tarjeta article:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -235,16 +234,16 @@ h2 {
 #img_contacto {
   display: inline-block;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 600px;
   overflow: hidden;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 
 #img_contacto img{
   width: auto;
   height: 100%;
-  margin-left: -120px;
+  margin-left: -2px;
 }
 
 #contacto {
@@ -257,16 +256,6 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
-
-/*form{
-	width:1000px;
-	padding:16px;
-	margin:auto;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
-}*/
-
 
 form label{
 	width:72px;
@@ -334,7 +323,19 @@ textarea{
 
 /*..........responsive.............*/
 
-@media screen and (max-width: 760px) and (min-width: 1px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #contacto {
+    width:auto;
+    padding:16px;
+    margin:auto;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
   
   #capsulas {
     justify-content: center;
@@ -352,16 +353,55 @@ textarea{
     justify-content: center;
   }
 
-  /* #productosAdaptable{
-    display: grid;
-    grid-template-columns: 50% 50%;
-  } */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  header div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header div img {
+    margin-bottom: 10px; /* Añade un margen inferior entre el logo y el título */
+  }
+
+  header div h1 {
+    font-size: 36px; /* Reduce el tamaño del título para que se ajuste mejor en pantallas pequeñas */
+  }
+
+  header nav {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav a {
+    padding: 10px; /* Ajusta el espaciado de los enlaces */
+    width: 100%; /* Asegura que los enlaces ocupen todo el ancho disponible */
+    text-align: left; /* Centra el texto */
+  }
+
+  #contacto {
+    width:auto;
+    padding:16px;
+    margin:auto;
+  }
+
+  #img_contacto img{
+    display: none;
+  }
+
 }
 
-@media screen and (max-width: 991px) and (min-width: 760px) {
 
-  /* #productosAdaptable{
-    display: grid;
-    grid-template-columns: 50% 50%;
-  } */
-}
+
+

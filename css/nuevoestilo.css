@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap');
+
+@font-face {
+  font-family: 'introbold';
+  src: url(/fuentes/Intro_Black_Alt.otf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'introregular';
+  src: url(/fuentes/Intro_Regular_Alt.otf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'introbook';
+  src: url(/fuentes/Intro_Book_Alt.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-------- generales ---------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Estilos generales */
+body {
+    width: 100%;
+    margin: auto;
+    font-family: 'introregular';
+  }
+  
+  header {
+    background-color: #e8c2ca;
+    padding: 10px 20px;
+  }
+  
+  header div {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  
+  header div img {
+    height: 90px;
+    width: auto;
+  }
+  
+  header div h1 {
+    font-family: 'introbold';
+    font-size: 48px;
+    color: #735d78;
+    text-shadow: 1px 1px 2px #666;
+    margin: 0;
+    /* Elimina márgenes predeterminados para un control mejor */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #e8c2ca;
+    height: 50px;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  nav a:hover {
+    background-color: #b392ac;
+    color: white;
+    border-radius: 10px;
+  }
+  .activo {
+    background-color: #b392ac;
+  }
+
+/*.........fin menu...........*/
+
+
+section {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /*       inicio slider      */
+  
+  
+  #slider {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 24px;
+  }
+  #slider img {
+      width: 320px;
+      height: 340px;
+      object-fit: cover;
+  }
+  
+  /*........inicio card......*/
+  
+  .tarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .tarjeta h2 {
+    width: 100%;
+    color: #202630;
+    font-size: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  
+  .tarjeta article {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width: auto;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius:15px;
+  }
+  
+  .tarjeta article h3 {
+    font-size: 24px;
+    padding: 10px 10px 0 10px;;
+  }
+  
+  .tarjeta article img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 0px 0px 0px 0px;
+  }
+  
+  .tarjeta article .cuerpo {
+    padding: 10px;
+    flex: 1 1 100%;
+  }
+  
+  .tarjeta article .precio {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'introbold';
+  }
+  
+  .tarjeta article .pie {
+    background: #d1b3c4;
+    border-radius:0 0 15px 15px;
+    padding: 10px;
+    text-align:center;
+  }
+  
+  .tarjeta article .pie a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .tarjeta article .pie a::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: ""
+  }
+  
+  .tarjeta article:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /*........fin card......*/
+  
+  
+  
+  .flotante {
+    display: scroll;
+    position: fixed;
+    bottom: 320px;
+    right: 0px;
+  }
+  
+  
+  
+  /*.........FOOTER...........*/
+  
+  footer {
+    background-color: #e8c2ca;
+    padding: 10px;
+    text-align: center;
+    margin-top: 56px;
+  }
+  
+  
+  /*.........FIN FOOTER...........*/
+  
+
+
+  
+  /* Estilos para pantallas pequeñas */
+  @media screen and (max-width: 760px) {
+    header div h1 {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+      margin-right: 20px;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: #e8c2ca;
+      top: 50px;
+      left: 0;
+    }
+  
+    nav a {
+      width: 100%;
+      text-align: center;
+    }
+  
+    input[type="checkbox"]:checked ~ nav {
+      display: flex;
+    }
+  }
