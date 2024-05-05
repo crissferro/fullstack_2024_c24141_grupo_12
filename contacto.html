@@ -68,10 +68,10 @@
 
     <!--fin de carrusel-->
     <!-- inicio formulario -->
+    <h2>Completa el Formulario de Contacto</h2>
     <section id="contacto">
-      <h2>Completa el Formulario de Contacto</h2>
-
-      <form action="">
+      <div>
+        <form action="">
         <fieldset id="datos_personales">
           <legend>Información Personal</legend>
 
@@ -94,27 +94,31 @@
           <p>Como desea ser contactado:</p>
           <div class="forma-contacto">
             <label for="telefono">Teléfono</label>
-            <input type="radio" name="contacto" value="telefono"/>
+            <input type="radio" name="contacto" value="telefono" id="telefono"/>
 
             <label for="correo">Correo</label>
             <input type="radio" name="contacto" value="correo" id="correo"/>
           </div>
 
           <p>Si Eligio Teléfono, elija la Fecha y Hora</p>
+          <div class="fecha_hora">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha"/>
 
-          <label for="fecha">Fecha:</label>
-          <input type="date" id="fecha"/>
-
-          <label for="hora">Hora:</label>
-          <input type="time" id="hora" min="9:00" max="18:00"/>
-
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" min="9:00" max="18:00"/>
+          </div>
         </fieldset>
         <fieldset id="boton_contacto">
           <input type="submit" value="Enviar" onclick="return validarEmail()"/>
         </fieldset>
-
       </form>
+      </div>
+      <div id="img_contacto">
+        <img src="./img/cafe_granos_resize.jpg" alt="">
+      </div>
     </section>
+ 
   </main>
   <footer>
     <div class="footer">

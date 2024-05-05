@@ -220,7 +220,11 @@ footer {
 
 /*.........CONTACTENOS...........*/
 
-#contacto h2 {
+
+
+h2 {  
+  max-width: 1200px;
+  margin: auto;
   width: 100%;
   color: #202630;
   font-size: 24px;
@@ -228,14 +232,40 @@ footer {
   margin-bottom: 32px;
 }
 
-form{
-	width:1100px;
+#img_contacto {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#img_contacto img{
+  width: auto;
+  height: 100%;
+  margin-left: -120px;
+}
+
+#contacto {
+  width:1000px;
 	padding:16px;
 	margin:auto;
   border: 1px solid lightgray;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
   border-radius:15px;
+  display: flex;
+  justify-content: space-between;
 }
+
+/*form{
+	width:1000px;
+	padding:16px;
+	margin:auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+}*/
 
 
 form label{
@@ -290,6 +320,14 @@ textarea{
 	resize:none;
 	display:block;
 }
+
+.forma-contacto, .fecha_hora {
+  width: 450px;
+  display:flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
 
 /*.........FIN CONTACTENOS...........*/
 
