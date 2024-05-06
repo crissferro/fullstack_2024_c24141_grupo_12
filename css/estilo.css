@@ -94,11 +94,6 @@ header nav a:hover {
 /*.........fin menu...........*/
 
 
-section {
-  max-width: 1200px;
-  margin: auto;
-}
-
 /*       inicio slider      */
 
 
@@ -114,6 +109,11 @@ section {
 }
 
 /*........inicio card......*/
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
 
 .tarjeta {
   display: flex;
