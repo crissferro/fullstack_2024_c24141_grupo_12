@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: 'introbold';
-  src: url(/fuentes/Intro_Black_Alt.otf);
+  src: url(../fuentes/Intro_Black_Alt.otf);
   font-weight: bold;
   font-style: bold;
 }
 
 @font-face {
   font-family: 'introregular';
-  src: url(/fuentes/Intro_Regular_Alt.otf);
+  src: url(../fuentes/Intro_Regular_Alt.otf);
   font-weight: bold;
   font-style: bold;
 }
 
 @font-face {
   font-family: 'introbook';
-  src: url(/fuentes/Intro_Book_Alt.otf);
+  src: url(../fuentes/Intro_Book_Alt.otf);
   font-weight: normal;
   font-style: normal;
 }
