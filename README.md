@@ -14,3 +14,5 @@ Tipografia utilizada: Intro.
 Se incluyo un slider utilizando boostrap.
 
 El HTML se recorrió exitosamente por el sitio Validator W3C sin errores ni advertencias.
+
+Se crea el backend con Node.js
