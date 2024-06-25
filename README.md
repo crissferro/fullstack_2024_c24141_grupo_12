@@ -4,7 +4,6 @@ Trabajo practico del curso Fullstack comision 24141 de Codo a Codo.
 # Equipo:
 
 - Cristian Ferro
-- Sebastián Cardozo
 - Hugo Barreto
 - Juan Pablo Alfonso
 
