@@ -35,8 +35,26 @@ module.exports = {
             res.json(registros);
         } catch (error) {
             throw error;
-        } finally {
-            conn.releaseConnection();
+        } 
+    },
+
+    getTiposProductos: async (req, res) => {
+        try {
+            const sql = `SELECT * FROM tipoProducto`;
+            const [registros] = await conn.query(sql);
+            res.json(registros);
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    getProveedores: async (req, res) => {
+        try {
+            const sql = `SELECT * FROM proveedor`;
+            const [registros] = await conn.query(sql);
+            res.json(registros);
+        } catch (error) {
+            throw error;
         }
     },
 

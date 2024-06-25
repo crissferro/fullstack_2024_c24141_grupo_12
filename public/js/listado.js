@@ -30,4 +30,26 @@ document.querySelector('body').onload = async () => {
 			</div>
 		</form>`
 	})
+
+	// Cargar tipos de productos y proveedores en los desplegables
+    const resTipos = await fetch(`http://localhost:8080/tiposProductos`)
+    const tiposProductos = await resTipos.json()
+    const resProveedores = await fetch(`http://localhost:8080/proveedores`)
+    const proveedores = await resProveedores.json()
+
+    let tipoProductoSelect = document.querySelector('select[name="id_tipoProducto"]')
+    tiposProductos.forEach(tipo => {
+        let option = document.createElement('option')
+        option.value = tipo.id
+        option.textContent = tipo.nombre
+        tipoProductoSelect.appendChild(option)
+    })
+
+    let proveedorSelect = document.querySelector('select[name="alias"]')
+    proveedores.forEach(proveedor => {
+        let option = document.createElement('option')
+        option.value = proveedor.id
+        option.textContent = proveedor.alias
+        proveedorSelect.appendChild(option)
+    })
 }
