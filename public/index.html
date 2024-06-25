@@ -26,6 +26,9 @@
       <a href="productos.html">Productos</a>
       <a href="accesorios.html">Accesorios</a>
       <a href="contacto.html">Contactenos</a>
+      <a href="login.html">Log In</a>
+      <a href="listado.html" id="listado-link" style="display:none;">Listado</a>
+      <a href="/logout">Logout</a>
     </nav>
       <!-- <img class="carrito" src="./img/img-nuevas/carrito.png" alt="" /> -->
 
@@ -149,6 +152,16 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script>
+    // Check if user is logged in
+    fetch('/check-session')
+        .then(response => response.json())
+        .then(data => {
+            if (data.loggedIn) {
+                document.getElementById('listado-link').style.display = 'block';
+            }
+        });
+</script>
 </body>
 
 </html>

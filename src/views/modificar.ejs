@@ -1,0 +1,40 @@
+<%- include('partials/head') %>
+	<body>
+		<header>
+			<div>
+			  <a href="index.html">
+				<img src="../img/logo.png" alt="Logo de Solo Caps"></a>
+		
+			  <h1>Solo Caps</h1>
+			</div>
+			<nav>
+			  <a class="activo" href="index.html">Inicio</a>
+			  <a href="productos.html">Productos</a>
+			  <a href="accesorios.html">Accesorios</a>
+			  <a href="contacto.html">Contactenos</a>
+			  <a href="listado.html">Listado</a>
+			</nav>
+			  <!-- <img class="carrito" src="./img/img-nuevas/carrito.png" alt="" /> -->
+		
+		  </header>
+
+		  <main>
+				<h2>Modificar el Item</h2>
+				<form action="/modificar?_metodo=PUT" method="POST">
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre" value="<%= registro.nombre %>">
+					<label for="descripcion">Descripcion:</label>
+					<input type="text" name="descripcion" value="<%= registro.descripcion %>">
+					<label for="precio">Precio:</label>
+					<input type="number" name="precio" value="<%= registro.precio %>">
+					<label for="id_tipoProducto">Tipo de Producto:</label>
+					<input type="number" name="id_tipoProducto" value="<%= registro.id_tipoProducto %>">
+					<label for="id_marca">Marca:</label>
+					<input type="number" name="id_marca" value="<%= registro.id_marca %>">
+					<input type="hidden" name="idMod" value="<%= registro.id %>"><br>
+					<input type="submit" value="Actualizar">
+				</form>
+		  </main>
+
+
+<%- include('partials/footer') %>

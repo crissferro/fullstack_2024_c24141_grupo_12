@@ -102,10 +102,11 @@ header nav a:hover {
   max-width: none;
   margin-bottom: 24px;
 }
+
 #slider img {
-    width: 320px;
-    height: 340px;
-    object-fit: cover;
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
 }
 
 /*........inicio card......*/
@@ -131,18 +132,19 @@ section {
 }
 
 .tarjeta article {
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: auto;
   border: 1px solid lightgray;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
+  border-radius: 15px;
 }
 
 .tarjeta article h3 {
   font-size: 24px;
-  padding: 10px 10px 0 10px;;
+  padding: 10px 10px 0 10px;
+  ;
 }
 
 .tarjeta article img {
@@ -165,9 +167,9 @@ section {
 
 .tarjeta article .pie {
   background: #d1b3c4;
-  border-radius:0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
   padding: 10px;
-  text-align:center;
+  text-align: center;
 }
 
 .tarjeta article .pie a {
@@ -221,7 +223,7 @@ footer {
 
 
 
-h2 {  
+h2 {
   max-width: 1200px;
   margin: auto;
   width: 100%;
@@ -240,47 +242,48 @@ h2 {
   /*border-radius: 50%;*/
 }
 
-#img_contacto img{
+#img_contacto img {
   width: auto;
   height: 100%;
   margin-left: -2px;
 }
 
 #contacto {
-  width:1000px;
-	padding:16px;
-	margin:auto;
+  width: 1000px;
+  padding: 16px;
+  margin: auto;
   border: 1px solid lightgray;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-form label{
-	width:72px;
-	font-weight: bold;
-	display: flex;
-  flex-direction:column;
-  justify-content:space-between;
+form label {
+  width: 72px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: auto;
 }
 
 form input[type="text"],
 form input[type="email"],
-form input[type="tel"]{
-	width:450px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
+form input[type="number"],
+form input[type="tel"] {
+  width: 450px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
 }
 
-form input[type="submit"]{
-	width:50%;
-	margin-top:32px;
+form input[type="submit"] {
+  width: 50%;
+  margin-top: 32px;
   border: none;
   border-radius: 10px;
   background-color: #d1b3c4;
@@ -290,29 +293,29 @@ form input[type="submit"]{
   font-size: 25px;
   width: 150px;
   height: 40px;
-} 
+}
 
-form input[type="submit"]:hover{
+form input[type="submit"]:hover {
   border: none;
   background-color: #b392ac;
   transform: scale(1.2);
 }
 
-textarea{
-	width:450px;
-	height:100px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;			
-	margin:8px 0;
-	/*resize: vertical | horizontal | none | both*/
-	resize:none;
-	display:block;
+textarea {
+  width: 450px;
+  height: 100px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  /*resize: vertical | horizontal | none | both*/
+  resize: none;
+  display: block;
 }
 
 .forma-contacto, .fecha_hora {
   width: 450px;
-  display:flex;
+  display: flex;
   margin-bottom: 10px;
   justify-content: space-between;
 }
@@ -320,14 +323,122 @@ textarea{
 
 /*.........FIN CONTACTENOS...........*/
 
+/*.........INICIO LISTADO...........*/
+
+
+.listado-agregar {
+  width: 1000px;
+  padding: 16px;
+  margin: auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+}
+
+
+.listado form label {
+  width: 72px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+}
+
+
+.listado-agregar a {
+  text-decoration: none;
+  color: white;
+}
+
+.listado-agregar a::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: ""
+}
+
+
+
+/* muestra el listado de productos */
+.list-header, .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.list-header {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.list-item h5 {
+  margin: 0;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/*
+.actions button, .actions input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.actions button a {
+  color: white;
+  text-decoration: none;
+}
+
+.actions button:hover, .actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+*/
+
+
+.form_listado form input[type="submit"] {
+  width: 50%;
+  margin-top: 32px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+}
+
+.form_listado form input[type="submit"]:hover {
+  border: none;
+  background-color: #b392ac;
+  transform: scale(1.2);
+}
+
+/*.........FIN LISTADO...........*/
+
+
 
 /*..........responsive.............*/
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   #contacto {
-    width:auto;
-    padding:16px;
-    margin:auto;
+    width: auto;
+    padding: 16px;
+    margin: auto;
   }
 }
 
@@ -336,16 +447,16 @@ textarea{
 
 
 @media screen and (max-width: 767px) and (min-width: 1px) {
-  
+
   #capsulas {
     justify-content: center;
   }
-  
+
   #accesorios {
     justify-content: center;
   }
 
-  #porta_capsulas{
+  #porta_capsulas {
     justify-content: center;
   }
 
@@ -369,11 +480,13 @@ textarea{
   }
 
   header div img {
-    margin-bottom: 10px; /* Añade un margen inferior entre el logo y el título */
+    margin-bottom: 10px;
+    /* Añade un margen inferior entre el logo y el título */
   }
 
   header div h1 {
-    font-size: 36px; /* Reduce el tamaño del título para que se ajuste mejor en pantallas pequeñas */
+    font-size: 36px;
+    /* Reduce el tamaño del título para que se ajuste mejor en pantallas pequeñas */
   }
 
   header nav {
@@ -385,23 +498,22 @@ textarea{
   }
 
   header nav a {
-    padding: 10px; /* Ajusta el espaciado de los enlaces */
-    width: 100%; /* Asegura que los enlaces ocupen todo el ancho disponible */
-    text-align: left; /* Centra el texto */
+    padding: 10px;
+    /* Ajusta el espaciado de los enlaces */
+    width: 100%;
+    /* Asegura que los enlaces ocupen todo el ancho disponible */
+    text-align: left;
+    /* Centra el texto */
   }
 
   #contacto {
-    width:auto;
-    padding:16px;
-    margin:auto;
+    width: auto;
+    padding: 16px;
+    margin: auto;
   }
 
-  #img_contacto img{
+  #img_contacto img {
     display: none;
   }
 
 }
-
-
-
-
