@@ -21,8 +21,8 @@ document.querySelector('body').onload = async () => {
 			<h5>${registro.nombre}</h5>
 			<h5>${registro.descripcion}</h5>
 			<h5>${registro.precio}</h5>
-            <h5>${registro.id_tipoProducto}</h5>
-			<h5>${registro.id_marca}</h5>
+            <h5>${registro.tipoProducto}</h5>
+			<h5>${registro.proveedor}</h5>
 			<input type="hidden" name="idEliminar" value="${registro.id}">
 			<div class="actions">
 			<h5><button><a href="/modificar/${registro.id}">Modificar</a></h5>
