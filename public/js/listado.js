@@ -1,55 +1,34 @@
 document.querySelector('body').onload = async () => {
-	const res = await fetch(`http://localhost:8080/listado`)
-	const datos = await res.json()
-	let listaHTML = document.querySelector(`#listado`)
-	/*listaHTML.innerHTML = ''*/
-	listaHTML.innerHTML = `
-        <div class="list-header">
-            <h4>Nombre</h4>
-            <h4>Descripción</h4>
-            <h4>Precio</h4>
-            <h4>Tipo Producto</h4>
-            <h4>Marca</h4>
-            <h4>Acciones</h4>
-        </div>
-    `;
-
-
-	datos.forEach(registro => {
-		listaHTML.innerHTML += `
-		<form method="POST" action="/listado?_metodo=DELETE" class="list-item">
-			<h5>${registro.nombre}</h5>
-			<h5>${registro.descripcion}</h5>
-			<h5>${registro.precio}</h5>
-            <h5>${registro.tipoProducto}</h5>
-			<h5>${registro.proveedor}</h5>
-			<input type="hidden" name="idEliminar" value="${registro.id}">
-			<div class="actions">
-			<h5><button><a href="/modificar/${registro.id}">Modificar</a></h5>
-			<h5><input type="submit" value="Eliminar"></h5>
-			</div>
-		</form>`
-	})
-
-	// Cargar tipos de productos y proveedores en los desplegables
-    const resTipos = await fetch(`http://localhost:8080/tiposProductos`)
-    const tiposProductos = await resTipos.json()
-    const resProveedores = await fetch(`http://localhost:8080/proveedores`)
-    const proveedores = await resProveedores.json()
-
-    let tipoProductoSelect = document.querySelector('select[name="id_tipoProducto"]')
-    tiposProductos.forEach(tipo => {
-        let option = document.createElement('option')
-        option.value = tipo.id
-        option.textContent = tipo.nombre
-        tipoProductoSelect.appendChild(option)
-    })
-
-    let proveedorSelect = document.querySelector('select[name="alias"]')
-    proveedores.forEach(proveedor => {
-        let option = document.createElement('option')
-        option.value = proveedor.id
-        option.textContent = proveedor.alias
-        proveedorSelect.appendChild(option)
-    })
-}
+    try {
+        const res = await fetch(`http://localhost:8080/listado`);
+        const datos = await res.json();
+        let listaHTML = document.querySelector(`#listado`);
+        listaHTML.innerHTML = `
+            <div class="list-header">
+                <h4>Nombre</h4>
+                <h4>Descripción</h4>
+                <h4>Precio</h4>
+                <h4>Tipo Producto</h4>
+                <h4>Marca</h4>
+                <h4>Acciones</h4>
+            </div>
+        `;
+        datos.forEach(registro => {
+            listaHTML.innerHTML += `
+            <form method="POST" action="/listado?_metodo=DELETE" class="list-item">
+                <h5>${registro.nombre}</h5>
+                <h5>${registro.descripcion}</h5>
+                <h5>${registro.precio}</h5>
+                <h5>${registro.tipoProducto}</h5>
+                <h5>${registro.proveedor}</h5>
+                <input type="hidden" name="idEliminar" value="${registro.id}">
+                <div class="actions">
+                <h5><button><a href="/modificar/${registro.id}">Modificar</a></h5>
+                <h5><input type="submit" value="Eliminar"></h5>
+                </div>
+            </form>`;
+        });
+    } catch (error) {
+        console.error('Error fetching list:', error);
+    }
+};

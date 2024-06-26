@@ -31,4 +31,8 @@ router.get('/modificar/:id', controladores.getModificar)
 router.put('/modificar', controladores.actualizar)
 router.delete('/listado', controladores.eliminar)
 
-module.exports = router
+// Rutas para obtener datos de proveedores y tipos de productos
+router.get('/proveedores', controladores.getProveedores);
+router.get('/tiposProducto', controladores.getTiposProducto);
+
+module.exports = router;

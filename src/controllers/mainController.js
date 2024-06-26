@@ -19,6 +19,7 @@ module.exports = {
             return res.redirect('/login.html');
         }
         try {
+            console.log('Fetching list...')
             const [registros] = await conn.query(`SELECT 
                     p.id, 
                     p.nombre, 
@@ -32,29 +33,33 @@ module.exports = {
                     tipoProducto tp ON p.id_tipoProducto = tp.id
                 JOIN 
                     proveedor pr ON p.alias = pr.id;`);
+            console.log('Fetched list:', registros);
             res.json(registros);
         } catch (error) {
+            console.error('Error fetching list:', error);
             throw error;
         } 
     },
 
-    getTiposProductos: async (req, res) => {
+    getProveedores: async (req, res) => {
+        const query = 'SELECT * FROM proveedor';
         try {
-            const sql = `SELECT * FROM tipoProducto`;
-            const [registros] = await conn.query(sql);
-            res.json(registros);
+            const [proveedores] = await conn.query(query);
+            res.json(proveedores);
         } catch (error) {
-            throw error;
+            console.error('Error al obtener proveedores:', error);
+            res.status(500).send('Error al obtener proveedores');
         }
     },
-
-    getProveedores: async (req, res) => {
+    
+    getTiposProducto: async (req, res) => {
+        const query = 'SELECT * FROM tipoProducto';
         try {
-            const sql = `SELECT * FROM proveedor`;
-            const [registros] = await conn.query(sql);
-            res.json(registros);
+            const [tiposProducto] = await conn.query(query);
+            res.json(tiposProducto);
         } catch (error) {
-            throw error;
+            console.error('Error al obtener tipos de productos:', error);
+            res.status(500).send('Error al obtener tipos de productos');
         }
     },
 
