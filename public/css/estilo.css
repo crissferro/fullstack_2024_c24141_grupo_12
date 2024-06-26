@@ -325,48 +325,11 @@ textarea {
 
 /*.........INICIO LISTADO...........*/
 
-
-.listado-agregar {
-  width: 1000px;
-  padding: 16px;
-  margin: auto;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius: 15px;
-}
-
-
-.listado form label {
-  width: 72px;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: auto;
-}
-
-
-.listado-agregar a {
-  text-decoration: none;
-  color: white;
-}
-
-.listado-agregar a::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: ""
-}
-
-
-
 /* muestra el listado de productos */
 .list-header, .list-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
@@ -376,41 +339,20 @@ textarea {
   font-weight: bold;
 }
 
+.list-header h4 {
+  font-size: 15px;
+}
+
 .list-item h5 {
   margin: 0;
   flex: 1;
+  font-size: 15px;
 }
 
-.actions {
-  display: flex;
-  gap: 10px;
-}
-
-/*
-.actions button, .actions input[type="submit"] {
-  padding: 5px 10px;
-  border: none;
-  background-color: #007BFF;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 3px;
-}
-
-.actions button a {
-  color: white;
-  text-decoration: none;
-}
-
-.actions button:hover, .actions input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-*/
 
 
-.form_listado form input[type="submit"] {
+#acciones input[type="submit"] {
   width: 50%;
-  margin-top: 32px;
   border: none;
   border-radius: 10px;
   background-color: #d1b3c4;
@@ -418,19 +360,118 @@ textarea {
   color: white;
   font-weight: 500;
   font-size: 20px;
-  width: 150px;
+  width: 100px;
   height: 40px;
 }
 
-.form_listado form input[type="submit"]:hover {
+#acciones input[type="submit"]:hover {
   border: none;
   background-color: #b392ac;
   transform: scale(1.2);
 }
 
+#acciones a {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  text-decoration: none;
+}
+
+#acciones a:hover {
+  border: none;
+  background-color: #b392ac;
+  transform: scale(1.2);
+}
+
+/* sector agregar producto */
+
+#producto-agregar {
+  width: 1000px;
+  padding: 16px;
+  margin: auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+}
+
+
+#producto-agregar form label {
+  width: 72px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+}
+
+
+#producto-agregar form a {
+  text-decoration: none;
+  color: white;
+}
+
+#producto-agregar form a::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: ""
+}
+
+#producto-agregar form input[type="submit"] {
+
+
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+  width: 150px;
+  height: 40px;
+}
+
+#producto-agregar form input[type="submit"]:hover {
+  border: none;
+  background-color: #b392ac;
+  transform: scale(1.2);
+}
+
+
+
 /*.........FIN LISTADO...........*/
 
+/*..........INICIO LOG IN ...............*/
 
+#login {
+  width: 800px;
+  padding: 16px;
+  margin: auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+}
+
+#login form label {
+  width: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+}
+
+
+/*.........FIN LOG IN...........*/
 
 /*..........responsive.............*/
 

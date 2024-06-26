@@ -40,8 +40,8 @@
 		</article>
 		
 		<h2>Agregar Producto Nuevo</h2>
-		<article class="listado-agregar">
-			<form action="/listado" method="POST" enctype="application/x-www-form-urlencoded"class="form_listado">
+		<article id="producto-agregar">
+			<form action="/listado" method="POST" enctype="application/x-www-form-urlencoded" class="producto-form">
 					<label for="nombre">Nombre:</label>
 					<input type="text" name="nombre">
 					<label for="descripcion">Descripcion:</label>
@@ -55,7 +55,7 @@
 					<label for="alias">Marca:</label>
 					<select name="alias" id="selectProveedor">
 						<option value="">Seleccione una marca</option>
-					</select>
+					</select><br>
 					<input type="submit" value="Agregar">
 			</form><br>
 		</article>
