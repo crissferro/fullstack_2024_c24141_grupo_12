@@ -470,6 +470,25 @@ textarea {
   width: auto;
 }
 
+#registro a {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+}
+
+#registro a:hover {
+  border: none;
+  background-color: #b392ac;
+  transform: scale(1.2);
+}
 
 /*.........FIN LOG IN...........*/
 

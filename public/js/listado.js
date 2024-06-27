@@ -1,9 +1,22 @@
 document.querySelector('body').onload = async () => {
-    try {
-        const res = await fetch(`http://localhost:8080/listado`);
-        const datos = await res.json();
-        let listaHTML = document.querySelector(`#listado`);
-        listaHTML.innerHTML = `
+    const token = localStorage.getItem('jwt-token')
+    console.log('Token from localStorage:', token);
+
+    const res = await fetch(`http://localhost:8080/listado`, {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    if (!res.ok) {
+        window.location.href = "/login.html"
+        throw Error("Problemas en login")
+    }
+
+    const datos = await res.json();
+    let listaHTML = document.querySelector(`#listado`);
+    listaHTML.innerHTML = `
             <div class="list-header">
                 <h4>Nombre</h4>
                 <h4>Descripción</h4>
@@ -13,8 +26,8 @@ document.querySelector('body').onload = async () => {
                 <h4>Acciones</h4>
             </div>
         `;
-        datos.forEach(registro => {
-            listaHTML.innerHTML += `
+    datos.forEach(registro => {
+        listaHTML.innerHTML += `
             <form method="POST" action="/listado?_metodo=DELETE" class="list-item">
                 <h5>${registro.nombre}</h5>
                 <h5>${registro.descripcion}</h5>
@@ -27,8 +40,5 @@ document.querySelector('body').onload = async () => {
                 <h5><input type="submit" value="Eliminar"></h5>
                 </div>
             </form>`;
-        });
-    } catch (error) {
-        console.error('Error fetching list:', error);
-    }
+    });
 };

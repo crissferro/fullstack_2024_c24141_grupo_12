@@ -2,22 +2,7 @@ const { conn } = require('../db/dbconnection');
 
 module.exports = {
 
-    login: async (req, res) => {
-        const { username, password } = req.body;
-        const sql = `SELECT * FROM usuarios WHERE username = ? AND password = ?`;
-        const [user] = await conn.query(sql, [username, password]);
-        if (user.length > 0) {
-            req.session.user = user[0];
-            res.redirect('/listado.html');
-        } else {
-            res.send('Usuario o contraseña incorrectos');
-        }
-    },
-
     getListado: async (req, res) => {
-        if (!req.session.user) {
-            return res.redirect('/login.html');
-        }
         try {
             console.log('Fetching list...')
             const [registros] = await conn.query(`SELECT 
@@ -36,9 +21,11 @@ module.exports = {
             console.log('Fetched list:', registros);
             res.json(registros);
         } catch (error) {
-            console.error('Error fetching list:', error);
-            throw error;
-        } 
+            console.error('Error fetching list:', error)
+            throw error
+        } finally {
+            conn.releaseConnection()
+        }
     },
 
     getProveedores: async (req, res) => {
@@ -51,7 +38,7 @@ module.exports = {
             res.status(500).send('Error al obtener proveedores');
         }
     },
-    
+
     getTiposProducto: async (req, res) => {
         const query = 'SELECT * FROM tipoProducto';
         try {
@@ -60,14 +47,6 @@ module.exports = {
         } catch (error) {
             console.error('Error al obtener tipos de productos:', error);
             res.status(500).send('Error al obtener tipos de productos');
-        }
-    },
-
-    checkSession: (req, res) => {
-        if (req.session.user) {
-            res.json({ loggedIn: true });
-        } else {
-            res.json({ loggedIn: false });
         }
     },
 
@@ -110,16 +89,6 @@ module.exports = {
         const eliminado = await conn.query(`DELETE FROM productos WHERE id=?`, req.body.idEliminar)
         console.log(eliminado)
         res.redirect('/listado.html')
-    },
-
-    logout: (req, res) => {
-        req.session.destroy(err => {
-            if (err) {
-                return res.redirect('/listado.html');
-            }
-            res.clearCookie('connect.sid');
-            res.redirect('/index.html');
-        });
     },
 
 }

@@ -14,6 +14,11 @@ const port = 8080 || process.env.PORT || 3000
 app.set('view engine', 'ejs')
 app.set('views', (__dirname + '/src/views'))
 
+app.use(express.static(__dirname + '/public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(override('_metodo'))
+
 
 //Es mejor ejecutar primero las rutas de login y luego las que necesiten 'auth'
 app.use('/login', login) // /login/login o /login/registro

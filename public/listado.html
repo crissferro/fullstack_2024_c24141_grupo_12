@@ -26,7 +26,7 @@
 		<a href="contacto.html">Contactenos</a>
 		<a href="login.html" style="display:none;">Log In</a>
 		<a class="activo"  href="listado.html" id="listado-link">Listado</a>
-		<a href="/logout">Logout</a>
+		<a href="/login">Logout</a>
 	  </nav>
       <!-- <img class="carrito" src="./img/img-nuevas/carrito.png" alt="" /> -->
 
@@ -41,7 +41,7 @@
 		
 		<h2>Agregar Producto Nuevo</h2>
 		<article id="producto-agregar">
-			<form action="/listado" method="POST" enctype="application/x-www-form-urlencoded" class="producto-form">
+			<form action="/listado" method="POST" enctype="multipart/form-data" class="producto-form">
 					<label for="nombre">Nombre:</label>
 					<input type="text" name="nombre">
 					<label for="descripcion">Descripcion:</label>
