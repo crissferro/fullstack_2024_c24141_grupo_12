@@ -31,6 +31,6 @@ app.use((req, res, next) => {
     res.status(404).send(`<h1 style="color: red"> Recurso no encontrado!</h1>`)
 })
 
-const IP = '127.0.0.1';
+//const IP = '127.0.0.1';
 
-app.listen(port, IP, () => console.log(`Hola, estoy arriba en el puerto: ${port}`))
+app.listen(port, () => console.log(`Hola, estoy arriba en el puerto: ${port}`))

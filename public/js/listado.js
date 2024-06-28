@@ -1,15 +1,13 @@
 /*vercel: https://solocaps.vercel.app/ */
 /* local:  http://localhost:8080/ */
 
-const apiUrl = process.env.APP_API_URL;
-
 document.querySelector('body').onload = async () => {
     const token = localStorage.getItem('jwt-token')
-    console.log('Token from localStorage:', token);
+    console.log('Token from localStorage:', token);   //verfico el token
 
     
 
-    const res = await fetch(`${apiUrl}/listado`, {
+    const res = await fetch(`https://solocaps.vercel.app/listado`, {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",
