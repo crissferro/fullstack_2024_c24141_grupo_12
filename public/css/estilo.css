@@ -492,6 +492,49 @@ textarea {
 
 /*.........FIN LOG IN...........*/
 
+
+/*..........INICIO REGISTRO ...............*/
+
+#registrar {
+  width: 800px;
+  padding: 16px;
+  margin: auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+}
+
+#registrar form label {
+  width: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+}
+
+#registrar a {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+}
+
+#registrar a:hover {
+  border: none;
+  background-color: #b392ac;
+  transform: scale(1.2);
+}
+
+/*.........FIN REGISTRO ...........*/
+
 /*..........responsive.............*/
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
