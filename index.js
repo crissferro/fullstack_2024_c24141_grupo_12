@@ -6,7 +6,7 @@ const override = require('method-override')
 const rutas = require('./src/routes/mainRoutes.js')
 const login = require('./src/routes/loginRoutes.js')
 const app = express()
-const auth = require('./src/config/auth')
+const auth = require('./src/config/auth.js')
 
 
 const port = 8080 || process.env.PORT || 3000
