@@ -8,7 +8,7 @@ document.querySelector('body').onload = async () => {
 
     
 
-    const res = await fetch(`ttps://solocaps.vercel.app/listado`, {
+    const res = await fetch(`https://solocaps.vercel.app/listado`, {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",
