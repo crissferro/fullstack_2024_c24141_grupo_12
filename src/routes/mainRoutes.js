@@ -2,20 +2,20 @@ const express = require('express')
 const router = express.Router()
 const controladores = require(`../controllers/mainController`)
 const multer = require('multer')
-// const path = require('path')
+const path = require('path')
 
 
 const storage = multer.diskStorage({
-	destination: (req, file, cb) =>{
+	destination: (req, file, cb) => {
 		cb(null, `public/img/`)
 	},
-	filename: (req, file, cb) =>{
+	filename: (req, file, cb) => {
 		console.log(file)
-		cb(null. Date.now() + "_" + file.originalname)
+		cb(null.Date.now() + "_" + file.originalname)
 	}
 })
 
-const uploadFile = multer({storage})
+const uploadFile = multer({ storage })
 
 router.get("/listado", controladores.getListado)
 router.post('/listado', uploadFile.single('archivo'), controladores.crearRegistro)
