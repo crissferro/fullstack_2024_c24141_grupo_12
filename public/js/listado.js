@@ -7,7 +7,7 @@ document.querySelector('body').onload = async () => {
 
     // Cargar listado de productos
     try {
-        const res = await fetch(`http://localhost:8080/listado`, {
+        const res = await fetch(`https://solocaps.vercel.app/listado`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +57,7 @@ document.querySelector('body').onload = async () => {
 
     async function cargarTiposProducto(token) {
         try {
-            const res = await fetch(`http://localhost:8080/tiposProducto`, {
+            const res = await fetch(`https://solocaps.vercel.app/tiposProducto`, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
@@ -91,7 +91,7 @@ document.querySelector('body').onload = async () => {
 
     async function cargarProveedores(token) {
         try {
-            const res = await fetch(`http://localhost:8080/proveedores`, {
+            const res = await fetch(`https://solocaps.vercel.app/proveedores`, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
