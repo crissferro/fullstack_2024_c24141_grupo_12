@@ -24,6 +24,7 @@ app.use(override('_metodo'))
 app.use('/login', login) // /login/login o /login/registro
 app.use('/', auth, rutas)
 
+
 //app.use('/admin', auth, rutasAdmin) // /admin/loquesea /admin/xyz
 
 

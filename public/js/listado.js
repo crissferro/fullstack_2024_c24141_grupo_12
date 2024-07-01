@@ -5,7 +5,7 @@ document.querySelector('body').onload = async () => {
     const token = localStorage.getItem('jwt-token')
     console.log('Token from localStorage:', token);   //verfico el token
 
-    
+    //cargar listado de productos
 
     const res = await fetch(`https://solocaps.vercel.app/listado`, {
         method: 'GET',
@@ -46,4 +46,73 @@ document.querySelector('body').onload = async () => {
                 </div>
             </form>`;
     });
+
+    // Cargar tipos de productos y proveedores
+    await Promise.all([cargarTiposProducto(token), cargarProveedores(token)]);
 };
+
+async function cargarTiposProducto(token) {
+    try {
+        const res = await fetch(`https://solocaps.vercel.app/tiposProducto`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            }
+        });
+        if (!res.ok) {
+            throw new Error(`Error fetching tiposProducto: ${res.statusText}`);
+        }
+        const tiposProducto = await res.json();
+        let selectTipoProducto = document.querySelector('#selecttipoProducto');
+        selectTipoProducto.innerHTML = `
+        <div class="list-datos_anexos-header">
+            <h4>ID</h4>
+            <h4>Nombre</h4>
+        </div>
+    `;
+        tiposProducto.forEach(tipo => {
+            selectTipoProducto.innerHTML += `
+                <div class="list-datos_anexos-item">
+                    <h5>${tipo.id}</h5>
+                    <h5>${tipo.nombre}</h5>
+                </div>`;
+        });
+    } catch (error) {
+        console.error('Error al cargar tipos de producto:', error);
+    }
+}
+
+async function cargarProveedores(token) {
+    try {
+        const res = await fetch(`http://localhost:8080/proveedores`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            }
+        });
+        if (!res.ok) {
+            throw new Error(`Error fetching proveedores: ${res.statusText}`);
+        }
+        const proveedores = await res.json();
+        let selectProveedores = document.querySelector('#proveedores');
+        selectProveedores.innerHTML = `
+        <div class="list-datos_anexos-header">
+            <h4>ID</h4>
+            <h4>Proveedor</h4>
+            <h4>Marca</h4>
+        </div>
+    `;
+        proveedores.forEach(proveedor => {
+            selectProveedores.innerHTML += `
+                <div class="list-datos_anexos-item">
+                    <h5>${proveedor.id}</h5>
+                    <h5>${proveedor.Proveedor}</h5>
+                    <h5>${proveedor.alias}</h5>
+                </div>`;
+        });
+    } catch (error) {
+        console.error('Error al cargar proveedores:', error);
+    }
+}

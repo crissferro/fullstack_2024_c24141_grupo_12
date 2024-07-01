@@ -26,7 +26,7 @@
 		<a href="contacto.html">Contactenos</a>
 		<a href="login.html" style="display:none;">Log In</a>
 		<a class="activo"  href="listado.html" id="listado-link">Listado</a>
-		<a href="/login">Logout</a>
+		<a href="index.html">Logout</a>
 	  </nav>
       <!-- <img class="carrito" src="./img/img-nuevas/carrito.png" alt="" /> -->
 
@@ -38,9 +38,39 @@
 		<article id="listado">
 			
 		</article>
+		<div id="datos_anexos">
+			<div>
+				<H3>Tipos de Productos</H3>
+				<article id="selecttipoProducto">
+				</article>
+			</div>
+			<div>
+				<h3>Proveedores</h3>
+				<article id="proveedores">
+				</article>
+			</div>
+		</div>
+
 		
 		<h2>Agregar Producto Nuevo</h2>
 		<article id="producto-agregar">
+			<form action="/listado" method="POST" enctype="multipart/form-data" class="producto-form">
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre">
+					<label for="descripcion">Descripcion:</label>
+					<input type="text" name="descripcion">
+					<label for="precio">Precio:</label>
+					<input type="text" name="precio">
+					<label for="id_tipoProducto">Tipo de Producto:</label>
+					<input type="number" name="id_tipoProducto">
+					<label for="alias">Marca:</label>
+					<input type="number" name="alias"><br>
+					<input type="submit" value="Agregar">
+			</form><br>
+		</article>
+
+
+		<!-- <article id="producto-agregar">
 			<form action="/listado" method="POST" enctype="multipart/form-data" class="producto-form">
 					<label for="nombre">Nombre:</label>
 					<input type="text" name="nombre">
@@ -58,7 +88,7 @@
 					</select><br>
 					<input type="submit" value="Agregar">
 			</form><br>
-		</article>
+		</article> -->
 		
 	</section>
 		
