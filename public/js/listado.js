@@ -13,11 +13,11 @@ document.querySelector('body').onload = async () => {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
         }
-    })
+    })/*
     if (!res.ok) {
         window.location.href = "/login.html"
         throw Error("Problemas en login")
-    }
+    }*/
 
     const datos = await res.json();
     let listaHTML = document.querySelector(`#listado`);
