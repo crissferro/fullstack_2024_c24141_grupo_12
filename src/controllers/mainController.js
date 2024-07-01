@@ -28,28 +28,6 @@ module.exports = {
         }
     },
 
-    /*getProveedores: async (req, res) => {
-        const query = 'SELECT * FROM proveedor';
-        try {
-            const [proveedores] = await conn.query(query);
-            res.json(proveedores);
-        } catch (error) {
-            console.error('Error al obtener proveedores:', error);
-            res.status(500).send('Error al obtener proveedores');
-        }
-    },
-
-    getTiposProducto: async (req, res) => {
-        const query = 'SELECT * FROM tipoProducto';
-        try {
-            const [tiposProducto] = await conn.query(query);
-            res.json(tiposProducto);
-        } catch (error) {
-            console.error('Error al obtener tipos de productos:', error);
-            res.status(500).send('Error al obtener tipos de productos');
-        }
-    },*/
-
     getProveedores: async (req, res) => {
         try {
             const [proveedores] = await conn.query('SELECT * FROM proveedor');
