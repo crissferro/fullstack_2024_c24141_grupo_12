@@ -30,15 +30,18 @@
   </header>
 <main>
   <h2>Registrar Usuario</h2>
+    <div id="login-registro">
+        <form action="/login/registro" method="POST" enctype="application/x-www-form-urlencoded" id="registro">
+        <label>Usuario: <input type="text" name="user"></label>
+        <label>Contraseña: <input type="text" name="password"></label>
+        <!-- <input type="hidden" name="idRole" value="2"> -->
+        <button type="submit" class="btn">Registarme</button>
+      </form>
+      <div id="btn-extra">
+        <a href="/login.html" class="btn">Regresar</a>
+      </div>
+    </div>
 
-  <form action="/login/registro" method="POST" enctype="application/x-www-form-urlencoded" id="registrar">
-	<label>Usuario: <input type="text" name="user"></label>
-	<label>Contraseña: <input type="text" name="password"></label>
-	<input type="hidden" name="idRole" value="2">
-	<button type="submit">Registarme</button>
-<br>
-	<a href="/login.html">Regresar</a>
-</form>
 	
 </main>
     

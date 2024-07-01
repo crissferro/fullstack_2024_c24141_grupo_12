@@ -22,6 +22,7 @@ app.use(override('_metodo'))
 
 //Es mejor ejecutar primero las rutas de login y luego las que necesiten 'auth'
 app.use('/login', login) // /login/login o /login/registro
+app.use('/', rutas)
 app.use('/', auth, rutas)
 
 

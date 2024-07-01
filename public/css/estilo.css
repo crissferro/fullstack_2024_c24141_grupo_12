@@ -326,6 +326,14 @@ textarea {
 /*.........INICIO LISTADO...........*/
 
 /* muestra el listado de productos */
+#listado {
+  max-height: 400px;
+  /* Ajusta esta altura según tus necesidades */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
 .list-header, .list-item {
   display: flex;
   justify-content: space-between;
@@ -349,28 +357,72 @@ textarea {
   font-size: 15px;
 }
 
+.acciones {
+  display: flex;
+  flex-direction: column;
+}
 
+#acciones .btn {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  /* Centrar verticalmente el texto */
+  text-decoration: none;
+  /* Para los enlaces */
+  display: inline-block;
+  /* Para los enlaces */
+}
 
+#acciones .btn:hover {
+  background-color: #d1b3c4;
+  transform: scale(1.2);
+}
+
+/* Estilos específicos para los enlaces */
+#acciones a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#acciones a:hover {
+  background-color: #b392ac;
+}
+
+/*
 #acciones input[type="submit"] {
-  width: 50%;
+  width: 100px;
+  height: 40px;
   border: none;
   border-radius: 10px;
   background-color: #d1b3c4;
   font-family: 'introbold';
   color: white;
   font-weight: 500;
-  font-size: 20px;
-  width: 100px;
-  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+  
+  text-decoration: none;
+
+  display: inline-block;
+
 }
 
 #acciones input[type="submit"]:hover {
   border: none;
-  background-color: #b392ac;
+  background-color: #70165d;
   transform: scale(1.2);
 }
 
-#acciones a {
+#acciones h5 a {
   width: 50%;
   border: none;
   border-radius: 10px;
@@ -380,7 +432,7 @@ textarea {
   font-weight: 500;
   font-size: 20px;
   width: 100px;
-  height: 40px;
+  height: 70px;
   text-decoration: none;
 }
 
@@ -388,12 +440,13 @@ textarea {
   border: none;
   background-color: #b392ac;
   transform: scale(1.2);
-}
+}*/
+
 
 /*  sector Tipo Producto y Proveedores   */
 
 #datos_anexos {
-  margin-top: 10px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
 }
@@ -404,10 +457,11 @@ textarea {
 
 .list-datos_anexos-header, .list-datos_anexos-item {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: left;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  width: 500px;
 }
 
 .list-datos_anexos-header {
@@ -486,9 +540,10 @@ textarea {
 
 /*.........FIN LISTADO...........*/
 
-/*..........INICIO LOG IN ...............*/
+/*..........INICIO LOGIN REGISTRO ...............*/
 
-#login {
+
+#login-registro {
   width: 800px;
   padding: 16px;
   margin: auto;
@@ -497,7 +552,7 @@ textarea {
   border-radius: 15px;
 }
 
-#login form label {
+#login-registro form label {
   width: 25px;
   font-weight: bold;
   display: flex;
@@ -506,70 +561,52 @@ textarea {
   width: auto;
 }
 
-#registro a {
-  width: 50%;
+
+
+#login-registro .btn {
+  width: 200px;
+  height: 50px;
   border: none;
   border-radius: 10px;
   background-color: #d1b3c4;
   font-family: 'introbold';
   color: white;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
-  width: 150px;
-  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  /* Centrar verticalmente el texto */
   text-decoration: none;
+  /* Para los enlaces */
+  display: inline-block;
+  /* Para los enlaces */
 }
 
-#registro a:hover {
-  border: none;
-  background-color: #b392ac;
-  transform: scale(1.2);
-}
-
-/*.........FIN LOG IN...........*/
-
-
-/*..........INICIO REGISTRO ...............*/
-
-#registrar {
-  width: 800px;
-  padding: 16px;
-  margin: auto;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius: 15px;
-}
-
-#registrar form label {
-  width: 25px;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: auto;
-}
-
-#registrar a {
-  width: 50%;
-  border: none;
-  border-radius: 10px;
+#login-registro .btn:hover {
   background-color: #d1b3c4;
-  font-family: 'introbold';
-  color: white;
-  font-weight: 500;
-  font-size: 20px;
-  width: 150px;
-  height: 40px;
-  text-decoration: none;
-}
-
-#registrar a:hover {
-  border: none;
-  background-color: #b392ac;
   transform: scale(1.2);
 }
 
-/*.........FIN REGISTRO ...........*/
+/* Estilos específicos para los enlaces */
+#login-registro a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#login-registro a:hover {
+  background-color: #b392ac;
+}
+
+
+#btn-extra {
+  margin-top: 20px;
+}
+
+/*..........FIN LOGIN REGISTRO.............*/
+
+
+
+
 
 /*..........responsive.............*/
 

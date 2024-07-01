@@ -7,7 +7,7 @@ document.querySelector('body').onload = async () => {
 
     // Cargar listado de productos
     try {
-        const res = await fetch(`https://solocaps.vercel.app/listado`, {
+        const res = await fetch(`http://localhost:8080/listado`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -41,9 +41,9 @@ document.querySelector('body').onload = async () => {
                     <h5>${registro.tipoProducto}</h5>
                     <h5>${registro.proveedor}</h5>
                     <input type="hidden" name="idEliminar" value="${registro.id}">
-                    <div id="acciones">
-                        <h5><a href="/modificar/${registro.id}">Modificar</a></h5>
-                        <h5><input type="submit" value="Eliminar"></h5>
+                    <div id="acciones" class="acciones">
+                        <h5><a href="/modificar/${registro.id}" class="btn">Modificar</a></h5>
+                        <h5><input type="submit" value="Eliminar" class="btn"></h5>
                     </div>
                 </form>`;
         });
@@ -57,7 +57,7 @@ document.querySelector('body').onload = async () => {
 
     async function cargarTiposProducto(token) {
         try {
-            const res = await fetch(`https://solocaps.vercel.app/tiposProducto`, {
+            const res = await fetch(`http://localhost:8080/tiposProducto`, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
@@ -91,7 +91,7 @@ document.querySelector('body').onload = async () => {
 
     async function cargarProveedores(token) {
         try {
-            const res = await fetch(`https://solocaps.vercel.app/proveedores`, {
+            const res = await fetch(`http://localhost:8080/proveedores`, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
