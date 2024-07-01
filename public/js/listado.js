@@ -85,7 +85,7 @@ async function cargarTiposProducto(token) {
 
 async function cargarProveedores(token) {
     try {
-        const res = await fetch(`http://localhost:8080/proveedores`, {
+        const res = await fetch(`https://solocaps.vercel.app/proveedores`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
