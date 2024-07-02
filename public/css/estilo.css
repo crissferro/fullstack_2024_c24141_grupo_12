@@ -449,6 +449,7 @@ textarea {
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
+  display: none;
 }
 
 #datos_anexos h3 {
