@@ -20,8 +20,8 @@
 
 		  <main>
 				<h2>Modificar el Item</h2>
-				<section>
-					<form action="/modificar?_metodo=PUT" method="POST">
+				<section id="producto-agregar">
+					<form action="/modificar?_metodo=PUT" method="POST" class="producto-form">
 						<label for="nombre">Nombre:</label>
 						<input type="text" name="nombre" value="<%= registro.nombre %>">
 						<label for="descripcion">Descripcion:</label>
@@ -35,6 +35,9 @@
 						<input type="hidden" name="idMod" value="<%= registro.id %>"><br>
 						<input type="submit" value="Actualizar">
 					</form>
+					<div id="btn-extra">
+						<a href="/listado.html" class="btn">Cancelar</a>
+					</div>
 				</section>
 				
 		  </main>

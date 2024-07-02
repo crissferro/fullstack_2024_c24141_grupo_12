@@ -129,8 +129,5 @@ document.querySelector('body').onload = async () => {
             console.error('Error al cargar proveedores:', error);
         }
 
-
-
-
     }
 };
