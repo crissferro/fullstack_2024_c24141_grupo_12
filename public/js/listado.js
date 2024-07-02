@@ -7,7 +7,7 @@ document.querySelector('body').onload = async () => {
 
     // Cargar listado de productos
     try {
-        const res = await fetch(`https://solocaps.vercel.app/listado`, {
+        const res = await fetch(`http://localhost:8080/listado`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -54,10 +54,10 @@ document.querySelector('body').onload = async () => {
         console.error('Error al cargar listado de productos:', error);
     }
 
-
+/*
     async function cargarTiposProducto(token) {
         try {
-            const res = await fetch(`https://solocaps.vercel.app/tiposProducto`, {
+            const res = await fetch(`http://localhost:8080/tiposProducto`, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
@@ -91,7 +91,7 @@ document.querySelector('body').onload = async () => {
 
     async function cargarProveedores(token) {
         try {
-            const res = await fetch(`https://solocaps.vercel.app/proveedores`, {
+            const res = await fetch(`http://localhost:8080/proveedores`, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
@@ -122,6 +122,80 @@ document.querySelector('body').onload = async () => {
             });
         } catch (error) {
             console.error('Error al cargar proveedores:', error);
+        }*/
+
+
+        async function cargarTiposProducto(token) {
+            try {
+                const res = await fetch(`http://localhost:8080/tiposProducto`, {
+                    method: 'GET',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+    
+                if (!res.ok) {
+                    throw new Error(`Error fetching tiposProducto: ${res.statusText}`);
+                }
+    
+                const tiposProducto = await res.json();
+                console.log('Tipos de Producto:', tiposProducto); // Verifico los datos obtenidos
+    
+                let selectTipoProducto = document.querySelector('#selecttipoProducto');
+                if (selectTipoProducto) {
+                    selectTipoProducto.innerHTML = '<option value="">Seleccione un tipo de producto</option>';
+                
+                    tiposProducto.forEach(tipo => {
+                        let option = document.createElement('option');
+                        option.value = tipo.id;
+                        option.textContent = tipo.nombre;
+                        selectTipoProducto.appendChild(option);
+                    });
+                } else {
+                    console.error('Elemento selectTipoProducto no encontrado en el DOM');
+                }
+            } catch (error) {
+                console.error('Error al cargar tipos de producto:', error);
+            }
         }
+    
+        async function cargarProveedores(token) {
+            try {
+                const res = await fetch(`http://localhost:8080/proveedores`, {
+                    method: 'GET',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+    
+                if (!res.ok) {
+                    throw new Error(`Error fetching proveedores: ${res.statusText}`);
+                }
+    
+                const proveedores = await res.json();
+                console.log('Proveedores:', proveedores); // Verifico los datos obtenidos
+    
+                let selectProveedores = document.querySelector('#proveedores');
+                if (selectProveedores) {
+                    selectProveedores.innerHTML = '<option value="">Seleccione una marca</option>';
+                
+                    proveedores.forEach(proveedor => {
+                        let option = document.createElement('option');
+                        option.value = proveedor.id;
+                        option.textContent = proveedor.alias;
+                        selectProveedores.appendChild(option);
+                    });
+                } else {
+                    console.error('Elemento selectProveedores no encontrado en el DOM');
+                }
+            } catch (error) {
+                console.error('Error al cargar proveedores:', error);
+            }
+
+
+
+
     }
 };
