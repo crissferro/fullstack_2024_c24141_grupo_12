@@ -27,6 +27,6 @@ router.delete('/listado', controladores.eliminar)
 router.get('/proveedores', controladores.getProveedores);
 router.get('/tiposProducto', controladores.getTiposProducto);
 
-router.get('/productos', mainController.getProductos);
+router.get('/api/productos', controladores.getProductos);
 
 module.exports = router;
