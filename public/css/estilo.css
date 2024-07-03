@@ -396,51 +396,6 @@ textarea {
   background-color: #b392ac;
 }
 
-/*
-#acciones input[type="submit"] {
-  width: 100px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  background-color: #d1b3c4;
-  font-family: 'introbold';
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
-  text-align: center;
-  line-height: 40px;
-  
-  text-decoration: none;
-
-  display: inline-block;
-
-}
-
-#acciones input[type="submit"]:hover {
-  border: none;
-  background-color: #70165d;
-  transform: scale(1.2);
-}
-
-#acciones h5 a {
-  width: 50%;
-  border: none;
-  border-radius: 10px;
-  background-color: #d1b3c4;
-  font-family: 'introbold';
-  color: white;
-  font-weight: 500;
-  font-size: 20px;
-  width: 100px;
-  height: 70px;
-  text-decoration: none;
-}
-
-#acciones a:hover {
-  border: none;
-  background-color: #b392ac;
-  transform: scale(1.2);
-}*/
 
 
 /*  sector Tipo Producto y Proveedores   */
@@ -568,7 +523,66 @@ textarea {
 #login-registro a:hover {
   background-color: #b392ac;
 }
+/*.........Inicio Pagina Modificar...........*/
 
+#producto-modificar {
+  width: 1000px;
+  padding: 16px;
+  margin: auto;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+}
+
+#producto-modificar form label {
+  width: 72px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+}
+
+#producto-modificar .btn {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1b3c4;
+  font-family: 'introbold';
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  /* Centrar verticalmente el texto */
+  text-decoration: none;
+  /* Para los enlaces */
+  display: inline-block;
+  /* Para los enlaces */
+}
+
+#producto-modificar .btn:hover {
+  background-color: #d1b3c4;
+  transform: scale(1.2);
+}
+
+/* Estilos específicos para los enlaces */
+#producto-modificar a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#producto-modificar a:hover {
+  background-color: #b392ac;
+}
+
+
+#btn-cancelar {
+  margin-top: 20px;
+}
+
+/*.........Fin Pagina Modificar...........*/
 /*.........FIN LISTADO...........*/
 
 /*..........INICIO LOGIN REGISTRO ...............*/

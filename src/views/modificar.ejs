@@ -20,7 +20,7 @@
 
 		  <main>
 				<h2>Modificar el Item</h2>
-				<div id="producto-agregar">
+				<div id="producto-modificar">
 					<form action="/modificar?_metodo=PUT" method="POST" class="producto-form">
 						<label for="nombre">Nombre:</label>
 						<input type="text" name="nombre" value="<%= registro.nombre %>">
@@ -29,13 +29,32 @@
 						<label for="precio">Precio:</label>
 						<input type="number" name="precio" value="<%= registro.precio %>">
 						<label for="id_tipoProducto">Tipo de Producto:</label>
+						<label for="id_tipoProducto">Tipo de Producto:</label>
+						<select name="id_tipoProducto" id="selecttipoProductoForm">
+							<option value="">Seleccione un tipo de producto</option>
+							<% tiposProducto.forEach(tipo => { %>
+								<option value="<%= tipo.id %>" <%= registro.id_tipoProducto === tipo.id ? 'selected' : '' %>><%= tipo.nombre %></option>
+							<% }) %>
+						</select>
+		
+						<label for="alias">Marca:</label>
+						<select name="alias" id="proveedoresForm">
+							<option value="">Seleccione una marca</option>
+							<% proveedores.forEach(proveedor => { %>
+								<option value="<%= proveedor.id %>" <%= registro.alias === proveedor.id ? 'selected' : '' %>><%= proveedor.alias %></option>
+							<% }) %>
+						</select>
+
+
+						<!-- <label for="id_tipoProducto">Tipo de Producto:</label>
 						<input type="number" name="id_tipoProducto" value="<%= registro.id_tipoProducto %>">
 						<label for="alias">Marca:</label>
 						<input type="number" name="alias" value="<%= registro.alias %>">
-						<input type="hidden" name="idMod" value="<%= registro.id %>"><br>
-						<input type="submit" value="Actualizar">
+						<input type="hidden" name="idMod" value="<%= registro.id %>"> --><br>
+						
+						<input type="submit" value="Actualizar" class="btn">
 					</form>
-					<div id="btn-extra">
+					<div id="btn-cancelar">
 						<a href="/listado.html" class="btn">Cancelar</a>
 					</div>
 				</div>

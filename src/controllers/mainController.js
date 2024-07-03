@@ -66,13 +66,23 @@ module.exports = {
     },
 
     getModificar: async (req, res) => {
-        const [modificar] = await conn.query(`SELECT * FROM productos WHERE id=?`, req.params.id)
-        console.log(modificar)
-        res.render('modificar', {
-            tituloDePagina: 'Página para Modificar Productos',
-            registro: modificar[0]
-        })
+        try {
+            const [modificar] = await conn.query(`SELECT * FROM productos WHERE id=?`, req.params.id);
+            const [tiposProducto] = await conn.query('SELECT * FROM tipoProducto');
+            const [proveedores] = await conn.query('SELECT * FROM proveedor');
+
+            res.render('modificar', {
+                tituloDePagina: 'Página para Modificar Productos',
+                registro: modificar[0],
+                tiposProducto,
+                proveedores
+            });
+        } catch (error) {
+            console.error('Error al obtener datos para modificar:', error);
+            res.status(500).send('Error interno del servidor');
+        }
     },
+
 
     actualizar: async (req, res) => {
         const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
@@ -81,6 +91,15 @@ module.exports = {
         console.log(modificado)
         res.redirect('/listado.html')
     },
+
+    /*
+    actualizar: async (req, res) => {
+        const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
+        const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
+        const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
+        console.log(modificado)
+        res.redirect('/listado.html')
+    },*/
 
 
     eliminar: async (req, res) => {
