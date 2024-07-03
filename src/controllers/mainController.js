@@ -83,23 +83,27 @@ module.exports = {
         }
     },
 
-
-    actualizar: async (req, res) => {
-        const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
-        const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
-        const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
-        console.log(modificado)
-        res.redirect('/listado.html')
-    },
-
     /*
+        actualizar: async (req, res) => {
+            const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
+            const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
+            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
+            console.log(modificado)
+            res.redirect('/listado.html')
+        },*/
+
     actualizar: async (req, res) => {
         const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
         const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
-        const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
-        console.log(modificado)
-        res.redirect('/listado.html')
-    },*/
+        try {
+            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
+            console.log(modificado)
+            res.redirect('/listado.html')
+        } catch (error) {
+            console.error('Error al actualizar producto:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
 
 
     eliminar: async (req, res) => {

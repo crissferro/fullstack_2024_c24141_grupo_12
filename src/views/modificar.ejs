@@ -44,14 +44,7 @@
 								<option value="<%= proveedor.id %>" <%= registro.alias === proveedor.id ? 'selected' : '' %>><%= proveedor.alias %></option>
 							<% }) %>
 						</select>
-
-
-						<!-- <label for="id_tipoProducto">Tipo de Producto:</label>
-						<input type="number" name="id_tipoProducto" value="<%= registro.id_tipoProducto %>">
-						<label for="alias">Marca:</label>
-						<input type="number" name="alias" value="<%= registro.alias %>">
-						<input type="hidden" name="idMod" value="<%= registro.id %>"> --><br>
-						
+						<input type="hidden" name="idMod" value="<%= registro.id %>"><br>
 						<input type="submit" value="Actualizar" class="btn">
 					</form>
 					<div id="btn-cancelar">
