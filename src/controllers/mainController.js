@@ -48,6 +48,30 @@ module.exports = {
         }
     },
 
+    getProductos: async (req, res) => {
+        try {
+            const [productos] = await conn.query(`
+                SELECT 
+                    p.id, 
+                    p.nombre, 
+                    p.descripcion, 
+                    p.precio, 
+                    tp.nombre AS tipoProducto, 
+                    pr.alias AS proveedor
+                FROM 
+                    productos p
+                JOIN 
+                    tipoProducto tp ON p.id_tipoProducto = tp.id
+                JOIN 
+                    proveedor pr ON p.alias = pr.id;
+            `);
+            res.json(productos);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+            res.status(500).send('Error al obtener productos');
+        }
+    },
+
 
     crearRegistro: async (req, res) => {
         const sql = `
