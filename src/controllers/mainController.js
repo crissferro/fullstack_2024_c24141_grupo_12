@@ -12,6 +12,7 @@ module.exports = {
                     p.precio, 
                     tp.nombre AS tipoProducto, 
                     pr.alias AS proveedor
+                    p.imagen
                 FROM 
                     productos p
                 JOIN 
