@@ -56,6 +56,7 @@ module.exports = {
                     p.nombre, 
                     p.descripcion, 
                     p.precio, 
+                    tp.id AS id_tipoProducto,
                     tp.nombre AS tipoProducto, 
                     pr.alias AS proveedor
                 FROM 
