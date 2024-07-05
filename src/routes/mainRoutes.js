@@ -20,6 +20,7 @@ const uploadFile = multer({ storage })
 router.get("/listado", controladores.getListado)
 router.post('/listado', uploadFile.single('archivo'), controladores.crearRegistro)
 router.get('/modificar/:id', controladores.getModificar)
+router.put('/modificar/:id', uploadFile.single('archivo'), controladores.actualizar);
 router.put('/modificar', controladores.actualizar)
 router.delete('/listado', controladores.eliminar)
 
