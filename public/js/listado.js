@@ -29,6 +29,7 @@ document.querySelector('body').onload = async () => {
                 <h4>Precio</h4>
                 <h4>Tipo Producto</h4>
                 <h4>Marca</h4>
+                <h4>Imagen</h4>
                 <h4>Acciones</h4>
             </div>
         `;
@@ -40,6 +41,7 @@ document.querySelector('body').onload = async () => {
                     <h5>${registro.precio}</h5>
                     <h5>${registro.tipoProducto}</h5>
                     <h5>${registro.proveedor}</h5>
+                    <h5>${registro.imagen}</h5>
                     <input type="hidden" name="idEliminar" value="${registro.id}">
                     <div id="acciones" class="acciones">
                         <h5><a href="/modificar/${registro.id}" class="btn">Modificar</a></h5>

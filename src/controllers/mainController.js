@@ -11,7 +11,7 @@ module.exports = {
                     p.descripcion, 
                     p.precio, 
                     tp.nombre AS tipoProducto, 
-                    pr.alias AS proveedor
+                    pr.alias AS proveedor,
                     p.imagen
                 FROM 
                     productos p
@@ -59,7 +59,8 @@ module.exports = {
                     p.precio, 
                     tp.id AS id_tipoProducto,
                     tp.nombre AS tipoProducto, 
-                    pr.alias AS proveedor
+                    pr.alias AS proveedor,
+                    p.imagen
                 FROM 
                     productos p
                 JOIN 
@@ -77,14 +78,15 @@ module.exports = {
 
     crearRegistro: async (req, res) => {
         const sql = `
-                INSERT INTO productos (nombre, descripcion, precio, id_tipoProducto, alias)
-                VALUES (?, ?, ?, ?, ?)`;
+                INSERT INTO productos (nombre, descripcion, precio, id_tipoProducto, alias, imagen)
+                VALUES (?, ?, ?, ?, ?, ?)`;
         const creado = await conn.query(sql, [
             req.body.nombre,
             req.body.descripcion,
             parseFloat(req.body.precio),
             req.body.id_tipoProducto,
-            req.body.alias
+            req.body.alias,
+            req.file.filename
         ])
         console.log('Producto agregado:', creado);
         res.redirect('/listado.html');
@@ -119,10 +121,10 @@ module.exports = {
         },*/
 
     actualizar: async (req, res) => {
-        const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
-        const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
+        const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=?, imagen=? WHERE id=?`
+        const { idMod, nombre, descripcion, precio, id_tipoProducto, alias, imagen } = req.body
         try {
-            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
+            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, imagen, idMod])
             console.log(modificado)
             res.redirect('/listado.html')
         } catch (error) {
