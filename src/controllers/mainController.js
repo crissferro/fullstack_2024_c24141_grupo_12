@@ -122,9 +122,9 @@ module.exports = {
 
     actualizar: async (req, res) => {
         const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=?, imagen=? WHERE id=?`
-        const { idMod, nombre, descripcion, precio, id_tipoProducto, alias, imagen } = req.body
+        const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
         try {
-            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, imagen, idMod])
+            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
             console.log(modificado)
             res.redirect('/listado.html')
         } catch (error) {
