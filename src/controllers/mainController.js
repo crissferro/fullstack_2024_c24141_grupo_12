@@ -86,10 +86,15 @@ module.exports = {
             parseFloat(req.body.precio),
             req.body.id_tipoProducto,
             req.body.alias,
-            req.file.filename
+            imagen
         ])
-        console.log('Producto agregado:', creado);
+        //console.log('Producto agregado:', creado);
+        //res.redirect('/listado.html');
         res.redirect('/listado.html');
+    }, catch(error) {
+        console.error('Error al crear registro:', error);
+        res.status(500).send('Error al crear registro');
+
 
     },
 
