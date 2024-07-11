@@ -7,6 +7,7 @@ const rutas = require('./src/routes/mainRoutes.js')
 const login = require('./src/routes/loginRoutes.js')
 const app = express()
 const auth = require('./src/config/auth.js')
+const path = require('path')
 
 
 const port = 8080 || process.env.PORT || 3000
