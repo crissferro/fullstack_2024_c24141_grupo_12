@@ -16,7 +16,6 @@
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "filename": "^0.5.0",
-    "firebase-admin": "^12.2.0",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",

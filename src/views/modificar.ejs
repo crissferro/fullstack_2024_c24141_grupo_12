@@ -44,8 +44,6 @@
 								<option value="<%= proveedor.id %>" <%= registro.alias === proveedor.id ? 'selected' : '' %>><%= proveedor.alias %></option>
 							<% }) %>
 						</select>
-						<label for="archivo">Nueva Imagen (opcional):</label>
-    					<input type="file" name="archivo"><br>
 						<input type="hidden" name="idMod" value="<%= registro.id %>"><br>
 						<input type="submit" value="Actualizar" class="btn">
 					</form>

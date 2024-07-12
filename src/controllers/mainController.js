@@ -1,7 +1,4 @@
 const { conn } = require('../db/dbconnection');
-const admin = require('firebase-admin')
-
-const bucket = admin.storage().bucket()
 
 module.exports = {
 
@@ -14,8 +11,7 @@ module.exports = {
                     p.descripcion, 
                     p.precio, 
                     tp.nombre AS tipoProducto, 
-                    pr.alias AS proveedor,
-                    p.imagen
+                    pr.alias AS proveedor
                 FROM 
                     productos p
                 JOIN 
@@ -62,8 +58,7 @@ module.exports = {
                     p.precio, 
                     tp.id AS id_tipoProducto,
                     tp.nombre AS tipoProducto, 
-                    pr.alias AS proveedor,
-                    p.imagen
+                    pr.alias AS proveedor
                 FROM 
                     productos p
                 JOIN 
@@ -80,45 +75,20 @@ module.exports = {
 
 
     crearRegistro: async (req, res) => {
-        if (!req.file) {
-            return res.status(400).send('No file uploaded.')
-        }
+        const sql = `
+                INSERT INTO productos (nombre, descripcion, precio, id_tipoProducto, alias)
+                VALUES (?, ?, ?, ?, ?)`;
+        const creado = await conn.query(sql, [
+            req.body.nombre,
+            req.body.descripcion,
+            parseFloat(req.body.precio),
+            req.body.id_tipoProducto,
+            req.body.alias
+        ])
+        console.log('Producto agregado:', creado);
+        res.redirect('/listado.html');
 
-        const blob = bucket.file(req.file.originalname)
-        const blobStream = blob.createWriteStream({
-            resumable: false
-        })
-
-        blobStream.on('error', (err) => {
-            console.error(err)
-            res.status(500).send('Something went wrong!')
-        })
-
-        blobStream.on('finish', async () => {
-            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`
-
-            const sql = `
-                INSERT INTO productos (nombre, descripcion, precio, id_tipoProducto, alias, imagen)
-                VALUES (?, ?, ?, ?, ?, ?)`
-            try {
-                const creado = await conn.query(sql, [
-                    req.body.nombre,
-                    req.body.descripcion,
-                    parseFloat(req.body.precio),
-                    req.body.id_tipoProducto,
-                    req.body.alias,
-                    publicUrl
-                ])
-                res.redirect('/listado.html')
-            } catch (error) {
-                console.error('Error al crear registro:', error)
-                res.status(500).send('Error al crear registro')
-            }
-        })
-
-        blobStream.end(req.file.buffer)
     },
-
 
     getModificar: async (req, res) => {
         try {
@@ -147,49 +117,16 @@ module.exports = {
             res.redirect('/listado.html')
         },*/
 
-    /*
-actualizar: async (req, res) => {
-    const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=?, imagen=? WHERE id=?`
-    const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
-    try {
-        const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
-        console.log(modificado)
-        res.redirect('/listado.html')
-    } catch (error) {
-        console.error('Error al actualizar producto:', error);
-        res.status(500).send('Error interno del servidor');
-    }
-},*/
-
     actualizar: async (req, res) => {
-        const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=?, imagen=? WHERE id=?`
+        const sql = `UPDATE productos SET nombre=?, descripcion=?, precio=?, id_tipoProducto=?, alias=? WHERE id=?`
         const { idMod, nombre, descripcion, precio, id_tipoProducto, alias } = req.body
-
-        let imageUrl = req.body.existingImageUrl // default to existing image url
-        if (req.file) {
-            const blob = bucket.file(req.file.originalname)
-            const blobStream = blob.createWriteStream({
-                resumable: false
-            })
-
-            blobStream.on('error', (err) => {
-                console.error(err)
-                res.status(500).send('Something went wrong!')
-            })
-
-            blobStream.on('finish', () => {
-                imageUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`
-            })
-
-            blobStream.end(req.file.buffer)
-        }
-
         try {
-            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, imageUrl, idMod])
+            const modificado = await conn.query(sql, [nombre, descripcion, precio, id_tipoProducto, alias, idMod])
+            console.log(modificado)
             res.redirect('/listado.html')
         } catch (error) {
-            console.error('Error al actualizar producto:', error)
-            res.status(500).send('Error interno del servidor')
+            console.error('Error al actualizar producto:', error);
+            res.status(500).send('Error interno del servidor');
         }
     },
 

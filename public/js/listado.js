@@ -29,7 +29,6 @@ document.querySelector('body').onload = async () => {
                 <h4>Precio</h4>
                 <h4>Tipo Producto</h4>
                 <h4>Marca</h4>
-                <h4>Imagen</h4>
                 <h4>Acciones</h4>
             </div>
         `;
@@ -41,10 +40,6 @@ document.querySelector('body').onload = async () => {
                     <h5>${registro.precio}</h5>
                     <h5>${registro.tipoProducto}</h5>
                     <h5>${registro.proveedor}</h5>
-                    // <h5>${registro.imagen}</h5>
-
-                    <h5><img src="${registro.imagen}" alt="${registro.nombre}" width="50"></h5>
-
                     <input type="hidden" name="idEliminar" value="${registro.id}">
                     <div id="acciones" class="acciones">
                         <h5><a href="/modificar/${registro.id}" class="btn">Modificar</a></h5>
@@ -135,65 +130,4 @@ document.querySelector('body').onload = async () => {
         }
 
     }
-    // Inicializar Firebase
-    const firebaseConfig = {
-        apiKey: "AIzaSyAv4DFD3DfWvVOlAGS_GPbNcQyDASu3M04",
-        authDomain: "solocaps-6d7c5.firebaseapp.com",
-        projectId: "solocaps-6d7c5",
-        storageBucket: "solocaps-6d7c5.appspot.com",
-        messagingSenderId: "100314311486",
-        appId: "1:100314311486:web:ede732a9d4f19527bf9a6f",
-        measurementId: "G-2RT9YGL9M1"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const storage = firebase.storage();
-
-    // Manejar el formulario de agregar producto
-    const form = document.querySelector('.producto-form');
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const nombre = form.nombre.value;
-        const descripcion = form.descripcion.value;
-        const precio = form.precio.value;
-        const tipoProducto = form.id_tipoProducto.value;
-        const proveedor = form.alias.value;
-        const archivo = form.archivo.files[0];
-
-        if (archivo) {
-            const storageRef = storage.ref();
-            const archivoRef = storageRef.child(`imagenes/${archivo.name}`);
-            const snapshot = await archivoRef.put(archivo);
-            const urlImagen = await snapshot.ref.getDownloadURL();
-
-            const nuevoProducto = {
-                nombre,
-                descripcion,
-                precio,
-                tipoProducto,
-                proveedor,
-                imagen: urlImagen
-            };
-
-            const res = await fetch('https://solocaps.vercel.app/listado', {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`
-                },
-                body: JSON.stringify(nuevoProducto)
-            });
-
-            if (res.ok) {
-                alert('Producto agregado exitosamente');
-                window.location.reload();
-            } else {
-                alert('Error al agregar producto');
-            }
-        } else {
-            alert('Por favor, selecciona una imagen para el producto');
-        }
-    });
-
-
 };

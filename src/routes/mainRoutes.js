@@ -5,29 +5,21 @@ const multer = require('multer')
 const path = require('path')
 
 
-// const uploadFile = multer({ storage })
-
-// Configure multer to use memory storage
-const upload = multer({ storage: multer.memoryStorage() })
-
-
-/*
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, `public/img/`)
 	},
 	filename: (req, file, cb) => {
 		console.log(file)
-		cb(null, Date.now() + "_" + file.originalname)
+		cb(null.Date.now() + "_" + file.originalname)
 	}
-})*/
+})
 
-
+const uploadFile = multer({ storage })
 
 router.get("/listado", controladores.getListado)
 router.post('/listado', uploadFile.single('archivo'), controladores.crearRegistro)
 router.get('/modificar/:id', controladores.getModificar)
-router.put('/modificar/:id', uploadFile.single('archivo'), controladores.actualizar);
 router.put('/modificar', controladores.actualizar)
 router.delete('/listado', controladores.eliminar)
 
