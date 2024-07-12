@@ -1,0 +1,273 @@
+[33mcommit 59a59edd4bf34ca0b7126bba562c04bf2440bf8b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Fri Jul 12 12:07:15 2024 -0300
+
+    modificamos archivos para subir desde firebase imagenes
+
+[33mcommit 274eedc80cb927da9239425b457530839f6b9d64[m
+Merge: da34f2e 0877894
+Author: crissferro <crissferro@gmail.com>
+Date:   Fri Jul 12 11:49:06 2024 -0300
+
+    Merge branch 'main' of https://github.com/crissferro/fullstack_2024_c24141_grupo_12
+
+[33mcommit da34f2e62e2ba520305f3ba0a62f8a6c3c23cd48[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Fri Jul 12 11:49:00 2024 -0300
+
+    modificaciones para subir archivos desde firebase
+
+[33mcommit 087789496f6dbdff81bc4bcc1289f65e7abd3947[m
+Author: crissferro <40971179+crissferro@users.noreply.github.com>
+Date:   Thu Jul 11 10:22:43 2024 -0300
+
+    Delete public/img/1720624294190_nescafe_capuccino.webp
+
+[33mcommit fdb873ba6a9ed2ad6da623b05d4bbda012a32251[m
+Author: crissferro <40971179+crissferro@users.noreply.github.com>
+Date:   Thu Jul 11 10:22:30 2024 -0300
+
+    Delete public/img/4538d456d01c7a7e13c8ff8b57c8d803
+
+[33mcommit 9badad05c32a37329de74552fc831aa0fe9aedb6[m
+Author: crissferro <40971179+crissferro@users.noreply.github.com>
+Date:   Thu Jul 11 10:22:21 2024 -0300
+
+    Delete public/img/41c446fa74811519af40e0897bc9699f
+
+[33mcommit 02f4cd9696b57b834e7f470b9d28ea0e891c8939[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Thu Jul 11 10:01:27 2024 -0300
+
+    modifico index
+
+[33mcommit 961086bacef278b354039a3bff06db6aa44e1167[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Thu Jul 11 09:58:41 2024 -0300
+
+    probando vercel nuevamente para subir imagen
+
+[33mcommit 3672ff18a26e30f021a0a004d29e996138e223f0[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 10 13:49:39 2024 -0300
+
+    subiendo imagen
+
+[33mcommit 6d4d9fe0d2896f915da8b9955aae9c68483d1ddf[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 10 13:27:16 2024 -0300
+
+    subi imagen
+
+[33mcommit 3fb0047e946c360dc408742332d303bcfae541f4[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 10 13:22:11 2024 -0300
+
+    subir imagen
+
+[33mcommit 801ed2cb05c50252462920add147e4f666df52d4[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 10 12:14:17 2024 -0300
+
+    modificando productos2 para que sea dinamico
+
+[33mcommit b47a06915df3809e8448487644c5145db7d19c8b[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Fri Jul 5 09:43:05 2024 -0300
+
+    subiendo mas modificaciones
+
+[33mcommit f24c142daade1c1096f910a1549b5ac869fe9790[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Thu Jul 4 14:02:05 2024 -0300
+
+    preparando para subir imagen
+
+[33mcommit b4f57d6372805d221968a5602ea22beb789d97e3[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Thu Jul 4 11:34:54 2024 -0300
+
+    agrego productos2.html y accesorios2.html como dinamicos consumiendo la BBDD
+
+[33mcommit 3148a50c2efc245acf85431e66261cc0dd8d97a2[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 3 14:24:52 2024 -0300
+
+    productos dinamicos
+
+[33mcommit 63a7fd008d16338f7f37482e3daeb586d712dfd2[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 3 14:23:49 2024 -0300
+
+    productos dinamicos
+
+[33mcommit 701012cd2e7645d8047789438c5952785a064969[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 3 14:21:46 2024 -0300
+
+    productos dinamicos
+
+[33mcommit 174eaf9ba3b13a686145628b6a18a3985ab5f2b4[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 3 14:17:22 2024 -0300
+
+    productos dinamicos
+
+[33mcommit 854bde7127fe3a7267f0c60cbc99e9677b034df7[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 3 14:14:08 2024 -0300
+
+    prueba productos dinamicos
+
+[33mcommit 25ce1fc30ce5a4f04cfee9f98d63de63349967e5[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Wed Jul 3 09:36:47 2024 -0300
+
+    actualizacion de modificar ejs para que guarde correctamente en la bd la modificacion
+
+[33mcommit 4bcb89c049bde006eaa0a4a6de2da23fc24b2d0f[m
+Author: crissferro <crissferrogmail.com>
+Date:   Tue Jul 2 23:54:55 2024 -0300
+
+    modificando modificarejs
+
+[33mcommit 05734188b11feab494667f121f5ff0cdba4830c1[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Tue Jul 2 14:47:24 2024 -0300
+
+    pagina modificar estilo botones
+
+[33mcommit 6ee78080859223c660d09d25e3c76502a1381047[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Tue Jul 2 14:32:11 2024 -0300
+
+    estilo de btn cancelar
+
+[33mcommit e57e09c23cdac47df18d049c3ec5c123d3e52240[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Tue Jul 2 14:25:53 2024 -0300
+
+    modificando modificar
+
+[33mcommit 5cb4ee1e27d7b8686fb9dda2e050bab2130417b7[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Tue Jul 2 12:39:43 2024 -0300
+
+    subiendo archivos para el select de agregar
+
+[33mcommit 1ab02b708106f51fe826e9a0660b474863302c2e[m
+Author: crissferro <crissferrogmail.com>
+Date:   Tue Jul 2 00:05:38 2024 -0300
+
+    trato de hacer que se muestren los tipos y la marca en el formulario de agregar producto
+
+[33mcommit 8a794aacdbb46a77381aff3d612f6eb40c52a908[m
+Author: crissferro <40971179+crissferro@users.noreply.github.com>
+Date:   Mon Jul 1 13:23:48 2024 -0300
+
+    Update README.md
+
+[33mcommit bbd2c38800f8cd3b3faef1fb9dd290e869563b66[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Mon Jul 1 13:17:39 2024 -0300
+
+    archivos de modificacion
+
+[33mcommit bffa2a13fa6122aa045e87fc2330e86dd5742639[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Mon Jul 1 12:29:07 2024 -0300
+
+    modificando ruta para vercel
+
+[33mcommit 5b1e07b4b27104da135058b059e6c49168a4a47a[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Mon Jul 1 12:27:57 2024 -0300
+
+    finalizando listado, estilos, login, y permisos
+
+[33mcommit 11e372d1cdfd0e6db80ae98ac806b5d3fa83bbc2[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Mon Jul 1 10:23:39 2024 -0300
+
+    cambios en listado
+
+[33mcommit 29db0ab5489954f900609efcbdcbf3c5510a91b6[m
+Author: crissferro <crissferrogmail.com>
+Date:   Sun Jun 30 23:52:03 2024 -0300
+
+    modifico listado.js
+
+[33mcommit b22e8d2ad11803520aa5eed20e1b866e6ef5f464[m
+Author: crissferro <crissferrogmail.com>
+Date:   Sun Jun 30 23:40:56 2024 -0300
+
+    cambios en listado.js
+
+[33mcommit 2267f41ae6a91f1c5bd6526ed6db4b31b52e7d45[m
+Author: crissferro <crissferrogmail.com>
+Date:   Sun Jun 30 22:53:27 2024 -0300
+
+    modifico env
+
+[33mcommit 5f269be9e60fed6e92365da848e0fd13f93dea0b[m
+Author: crissferro <crissferrogmail.com>
+Date:   Sun Jun 30 22:42:06 2024 -0300
+
+    actualizo listado.js
+
+[33mcommit 8f32a1a95f5a3383768efb3e1b9d40fc0afb69fc[m
+Author: crissferro <crissferrogmail.com>
+Date:   Sun Jun 30 22:29:17 2024 -0300
+
+    subo modificacion para hacer get de tipo y proveedores
+
+[33mcommit f6af31316f3ab275cc8bc9771701177df7591652[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 19:34:41 2024 -0300
+
+    subo a produccion
+
+[33mcommit 903903fada74d42d74f2dadb7cbe18e529a13cba[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 17:19:03 2024 -0300
+
+    subiendo env para probar
+
+[33mcommit 8945c4e171b7dcc0279fa677b28b35154ca49c92[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 17:07:15 2024 -0300
+
+    borrando cosas que no van
+
+[33mcommit b806863e7c33bededc2b1bce4fa65c6feae8e87c[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 16:55:04 2024 -0300
+
+    cambio JS por js
+
+[33mcommit 34b256d6a4f611b3c0a87022e8914d53fa9cc37a[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 16:46:06 2024 -0300
+
+    falto la h en http
+
+[33mcommit b68fe4a4d60bfb70bc239c8acd9408e0dc6a6aa2[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 16:43:02 2024 -0300
+
+    publico listado
+
+[33mcommit 73389ae0190a9792f187f0352b6faefc582d2c38[m
+Author: crissferro <crissferrogmail.com>
+Date:   Fri Jun 28 16:34:49 2024 -0300
+
+    tratando de subir a vercel
+
+[33mcommit c990f53ce98e63b7579a7ea2a84c6ad4fecf99a9[m
+Author: crissferro <crissferro@gmail.com>
+Date:   Fri Jun 28 14:42:29 2024 -0300
+
+    probando vercer
+
+[33mcommit 597e2588e8f85319ff2b27721beef71a81eac1d1[m
+Author: crissfe
